@@ -1,35 +1,25 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { RxHamburgerMenu } from "react-icons/rx";
+import "./App.css";
+import "./styling/header.css";
+import InstaCartLogo from "./assets/nav-carrot-logo.webp";
 
 function App() {
-  const [count, setCount] = useState(0)
-
-  return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+	return (
+		<header className="header">
+			<nav className="header-nav">
+				<div className="nav-left">
+					<button className="nav-menu-button">
+						<RxHamburgerMenu size={"1.2rem"} />
+					</button>
+					<img className="nav-left-instacart-logo" src={InstaCartLogo} alt="Carrot" />
+				</div>
+				<div className="nav-right">
+					<button>Log in</button>
+					<button>Sign up</button>
+				</div>
+			</nav>
+		</header>
+	);
 }
 
-export default App
+export default App;
