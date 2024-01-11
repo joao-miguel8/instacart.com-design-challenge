@@ -4,40 +4,47 @@ import Flag from "react-world-flags";
 import InstaCartLogo from "../../assets/nav-carrot-logo.webp";
 import "./homeMainMenu.css";
 import "../../App.css";
+import { useState } from "react";
 
-function ChangeCountryPopup() {
+function ChangeCountryPopup({ isCloseCountryChoicePopupOpen, setIsCloseCountryChoicePopupOpen }: { isCloseCountryChoicePopupOpen: boolean; setIsCloseCountryChoicePopupOpen: (val: boolean) => boolean }) {
 	return (
-		<div>
-			<div className="change-country-overlay"></div>
-			<div className="change-country-popup">
-				<div className="change-country-pop-btn-container">
-					<button className="change-country-pop-btn">
-						<div>
-							<Flag code={"US"} />
-							<span>United States</span>
+		<>
+			{isCloseCountryChoicePopupOpen && (
+				<div>
+					<div onClick={() => setIsCloseCountryChoicePopupOpen(false)} className="change-country-overlay"></div>
+					<div className="change-country-popup">
+						<div className="change-country-pop-btn-container">
+							<button className="change-country-pop-btn">
+								<div>
+									<Flag code={"US"} />
+									<span>United States</span>
+								</div>
+								<IoIosCheckmark size={"1.4rem"} color={"green"} />
+							</button>
+							<button className="change-country-pop-btn">
+								<div>
+									<Flag code={"CA"} />
+									<span>Canada</span>
+								</div>
+								{/* <IoIosCheckmark size={"1.4rem"} color={"green"} /> */}
+							</button>
 						</div>
-						<IoIosCheckmark size={"1.4rem"} color={"green"} />
-					</button>
-					<button className="change-country-pop-btn">
-						<div>
-							<Flag code={"CA"} />
-							<span>Canada</span>
+						<div onClick={() => setIsCloseCountryChoicePopupOpen(false)} className="close-country-pop-up-btn-wrapper">
+							<button>
+								<span>Close</span>
+							</button>
 						</div>
-						{/* <IoIosCheckmark size={"1.4rem"} color={"green"} /> */}
-					</button>
+					</div>
 				</div>
-				<div className="close-country-pop-up-btn-wrapper">
-					<button>
-						<span>Close</span>
-					</button>
-				</div>
-			</div>
-		</div>
+			)}
+		</>
 	);
 }
 
 function HomeMainMenu({ handleCloseNavMenu, isMenuOpen }: { handleCloseNavMenu: () => void; isMenuOpen: boolean }) {
 	const navList = [{ label: "Departments" }, { label: "More ways to shop" }, { label: "Help" }];
+
+	const [isCloseCountryChoicePopupOpen, setIsCloseCountryChoicePopupOpen] = useState(false);
 
 	return (
 		<>
@@ -67,14 +74,14 @@ function HomeMainMenu({ handleCloseNavMenu, isMenuOpen }: { handleCloseNavMenu: 
 					))}
 				</div>
 				{/* country select */}
-				<button className="menu-open-change-country-btn">
+				<button onClick={() => setIsCloseCountryChoicePopupOpen(true)} className="menu-open-change-country-btn">
 					<div className="nav-country">
 						<Flag code={"US"} />
 						<span>United States</span>
 					</div>
 					<span className="change-country">Change</span>
 				</button>
-				<ChangeCountryPopup />
+				<ChangeCountryPopup isCloseCountryChoicePopupOpen={isCloseCountryChoicePopupOpen} setIsCloseCountryChoicePopupOpen={setIsCloseCountryChoicePopupOpen} />
 			</div>
 		</>
 	);
