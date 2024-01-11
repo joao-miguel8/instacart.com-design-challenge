@@ -2,7 +2,7 @@ import { RxHamburgerMenu } from "react-icons/rx";
 import InstaCartLogo from "../../assets/nav-carrot-logo.webp";
 import "../../App.css";
 import "../header/header.css";
-import HomeMainMenu from "./nav/HomeMainMenu";
+import HomeMainMenu from "../home-main-menu/HomeMainMenu";
 
 function Header({ handleCloseMainMenu, isMenuOpen }: { handleCloseNavMenu?: () => void | undefined; isMenuOpen?: boolean }) {
 	return (

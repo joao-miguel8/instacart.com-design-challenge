@@ -1,11 +1,42 @@
 import { IoChevronForward, IoClose } from "react-icons/io5";
+import { IoIosCheckmark } from "react-icons/io";
 import Flag from "react-world-flags";
-import InstaCartLogo from "../../../assets/nav-carrot-logo.webp";
+import InstaCartLogo from "../../assets/nav-carrot-logo.webp";
 import "./homeMainMenu.css";
-import "../../../App.css";
+import "../../App.css";
+
+function ChangeCountryPopup() {
+	return (
+		// {/* pop up below */}
+		<div className="change-country-popup">
+			<div className="change-country-pop-btn-container">
+				<button className="change-country-pop-btn">
+					<div>
+						<Flag code={"US"} />
+						<span>United States</span>
+					</div>
+					<IoIosCheckmark size={"1.4rem"} color={"green"} />
+				</button>
+				<button className="change-country-pop-btn">
+					<div>
+						<Flag code={"CA"} />
+						<span>Canada</span>
+					</div>
+					{/* <IoIosCheckmark size={"1.4rem"} color={"green"} /> */}
+				</button>
+			</div>
+			<div className="close-country-pop-up-btn-wrapper">
+				<button>
+					<span>Close</span>
+				</button>
+			</div>
+		</div>
+	);
+}
 
 function HomeMainMenu({ handleCloseNavMenu, isMenuOpen }: { handleCloseNavMenu: () => void; isMenuOpen: boolean }) {
 	const navList = [{ label: "Departments" }, { label: "More ways to shop" }, { label: "Help" }];
+
 	return (
 		<>
 			<div className="menu-container">
@@ -41,6 +72,7 @@ function HomeMainMenu({ handleCloseNavMenu, isMenuOpen }: { handleCloseNavMenu: 
 					</div>
 					<span className="change-country">Change</span>
 				</button>
+				<ChangeCountryPopup />
 			</div>
 		</>
 	);
