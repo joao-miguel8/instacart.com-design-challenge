@@ -38,7 +38,7 @@ function ChangeCountryPopup({
 						<div className="change-country-pop-btn-container">
 							{countryOptions.map(country => {
 								const unselectedCountry = countrySelected.name !== country.name;
-								const selectedCountry = countrySelected.name !== country.name;
+								const selectedCountry = countrySelected.name === country.name;
 								return (
 									<button onClick={() => handleCountryChoice(country)} className="change-country-pop-btn">
 										<div>
