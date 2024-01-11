@@ -7,28 +7,30 @@ import "../../App.css";
 
 function ChangeCountryPopup() {
 	return (
-		// {/* pop up below */}
-		<div className="change-country-popup">
-			<div className="change-country-pop-btn-container">
-				<button className="change-country-pop-btn">
-					<div>
-						<Flag code={"US"} />
-						<span>United States</span>
-					</div>
-					<IoIosCheckmark size={"1.4rem"} color={"green"} />
-				</button>
-				<button className="change-country-pop-btn">
-					<div>
-						<Flag code={"CA"} />
-						<span>Canada</span>
-					</div>
-					{/* <IoIosCheckmark size={"1.4rem"} color={"green"} /> */}
-				</button>
-			</div>
-			<div className="close-country-pop-up-btn-wrapper">
-				<button>
-					<span>Close</span>
-				</button>
+		<div>
+			<div className="change-country-overlay"></div>
+			<div className="change-country-popup">
+				<div className="change-country-pop-btn-container">
+					<button className="change-country-pop-btn">
+						<div>
+							<Flag code={"US"} />
+							<span>United States</span>
+						</div>
+						<IoIosCheckmark size={"1.4rem"} color={"green"} />
+					</button>
+					<button className="change-country-pop-btn">
+						<div>
+							<Flag code={"CA"} />
+							<span>Canada</span>
+						</div>
+						{/* <IoIosCheckmark size={"1.4rem"} color={"green"} /> */}
+					</button>
+				</div>
+				<div className="close-country-pop-up-btn-wrapper">
+					<button>
+						<span>Close</span>
+					</button>
+				</div>
 			</div>
 		</div>
 	);
