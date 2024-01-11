@@ -6,7 +6,29 @@ import "./homeMainMenu.css";
 import "../../App.css";
 import { useState } from "react";
 
-function ChangeCountryPopup({ isCloseCountryChoicePopupOpen, setIsCloseCountryChoicePopupOpen }: { isCloseCountryChoicePopupOpen: boolean; setIsCloseCountryChoicePopupOpen: (val: boolean) => boolean }) {
+type CountrySelectionOptionsType = {
+	flag: string;
+	name: string;
+};
+
+function ChangeCountryPopup({
+	isCloseCountryChoicePopupOpen,
+	setIsCloseCountryChoicePopupOpen,
+	countryOptions,
+	countrySelected,
+	setCountrySelected,
+}: {
+	isCloseCountryChoicePopupOpen: boolean;
+	setIsCloseCountryChoicePopupOpen: (val: boolean) => void;
+	countryOptions: CountrySelectionOptionsType[];
+	countrySelected: CountrySelectionOptionsType;
+	setCountrySelected: (chosenCountry: CountrySelectionOptionsType) => void;
+}) {
+	const handleCountryChoice = (chosenCountry: CountrySelectionOptionsType) => {
+		setCountrySelected(chosenCountry);
+		setIsCloseCountryChoicePopupOpen(false);
+	};
+
 	return (
 		<>
 			{isCloseCountryChoicePopupOpen && (
@@ -14,20 +36,19 @@ function ChangeCountryPopup({ isCloseCountryChoicePopupOpen, setIsCloseCountryCh
 					<div onClick={() => setIsCloseCountryChoicePopupOpen(false)} className="change-country-overlay"></div>
 					<div className="change-country-popup">
 						<div className="change-country-pop-btn-container">
-							<button className="change-country-pop-btn">
-								<div>
-									<Flag code={"US"} />
-									<span>United States</span>
-								</div>
-								<IoIosCheckmark size={"1.4rem"} color={"green"} />
-							</button>
-							<button className="change-country-pop-btn">
-								<div>
-									<Flag code={"CA"} />
-									<span>Canada</span>
-								</div>
-								{/* <IoIosCheckmark size={"1.4rem"} color={"green"} /> */}
-							</button>
+							{countryOptions.map(country => {
+								const unselectedCountry = countrySelected.name !== country.name;
+								const selectedCountry = countrySelected.name !== country.name;
+								return (
+									<button onClick={() => handleCountryChoice(country)} className="change-country-pop-btn">
+										<div>
+											<Flag code={country.flag} />
+											<span className={`${unselectedCountry && "unselected-country-text-style"}`}>{country.name}</span>
+										</div>
+										{selectedCountry && <IoIosCheckmark size={"1.4rem"} color={"green"} />}
+									</button>
+								);
+							})}
 						</div>
 						<div onClick={() => setIsCloseCountryChoicePopupOpen(false)} className="close-country-pop-up-btn-wrapper">
 							<button>
@@ -45,6 +66,12 @@ function HomeMainMenu({ handleCloseNavMenu, isMenuOpen }: { handleCloseNavMenu: 
 	const navList = [{ label: "Departments" }, { label: "More ways to shop" }, { label: "Help" }];
 
 	const [isCloseCountryChoicePopupOpen, setIsCloseCountryChoicePopupOpen] = useState(false);
+
+	const countrySelection: CountrySelectionOptionsType[] = [
+		{ flag: "US", name: "United States" },
+		{ flag: "CA", name: "Canada" },
+	];
+	const [countrySelected, setCountrySelected] = useState(countrySelection[0]);
 
 	return (
 		<>
@@ -74,14 +101,14 @@ function HomeMainMenu({ handleCloseNavMenu, isMenuOpen }: { handleCloseNavMenu: 
 					))}
 				</div>
 				{/* country select */}
-				<button onClick={() => setIsCloseCountryChoicePopupOpen(true)} className="menu-open-change-country-btn">
+				<button key={countrySelected.name} onClick={() => setIsCloseCountryChoicePopupOpen(true)} className="menu-open-change-country-btn">
 					<div className="nav-country">
-						<Flag code={"US"} />
-						<span>United States</span>
+						<Flag code={countrySelected.flag} />
+						<span>{countrySelected.name}</span>
 					</div>
 					<span className="change-country">Change</span>
 				</button>
-				<ChangeCountryPopup isCloseCountryChoicePopupOpen={isCloseCountryChoicePopupOpen} setIsCloseCountryChoicePopupOpen={setIsCloseCountryChoicePopupOpen} />
+				<ChangeCountryPopup isCloseCountryChoicePopupOpen={isCloseCountryChoicePopupOpen} setIsCloseCountryChoicePopupOpen={setIsCloseCountryChoicePopupOpen} countryOptions={countrySelection} countrySelected={countrySelected} setCountrySelected={setCountrySelected} />
 			</div>
 		</>
 	);

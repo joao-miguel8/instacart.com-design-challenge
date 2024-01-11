@@ -139,6 +139,10 @@
 	top: 0;
 }
 
+.unselected-country-text-style {
+	color: rgb(114, 118, 126);
+}
+
 /* ---------------------- */
 /* Hovers and Effects */
 /* ---------------------- */
