@@ -7,6 +7,7 @@
 	padding: 12px;
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
 	cursor: pointer;
 }
 
@@ -26,9 +27,18 @@
 	padding: 0;
 }
 
-.nav-left-instacart-logo {
+.nav-left-instacart-logo img {
 	width: 24px;
 	cursor: pointer;
+}
+
+.nav-left-instacart-lg-logo {
+	display: none;
+	width: 140px;
+}
+
+.nav-left-instacart-lg-logo img {
+	width: 100%;
 }
 
 .nav-right {
@@ -56,4 +66,18 @@
 	border: none;
 	background: green;
 	color: white;
+}
+
+/* ======================== */
+/* MEDIA QUERY */
+/* ======================== */
+
+@media (min-width: 750px) {
+	.nav-left-instacart-lg-logo {
+		display: inline-block;
+	}
+
+	.nav-left-instacart-logo {
+		display: none;
+	}
 }
