@@ -165,6 +165,10 @@
 	.nav-right-menu-open {
 		display: none;
 	}
+
+	.menu-open-change-country-btn {
+		display: none;
+	}
 }
 
 /* ============================ */
