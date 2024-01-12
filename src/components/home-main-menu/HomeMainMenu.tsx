@@ -82,9 +82,9 @@ function SelectedMenuItemList({ menuItems, isMenuItemsListOpen, setIsMenuItemsLi
 							menuItems.dropDownItems.map((navItem: string) => {
 								return (
 									<li key={navItem}>
-										<button className="dropdown-menu-item-btn">
+										<a className="dropdown-menu-item-link">
 											<span>{navItem}</span>
-										</button>
+										</a>
 									</li>
 								);
 							})}
