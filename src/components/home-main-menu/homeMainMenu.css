@@ -140,6 +140,10 @@
 		width: 40%;
 	}
 
+	.menu-list button {
+		font-size: 12px;
+	}
+
 	.nav-close-menu-button {
 		justify-self: start;
 	}
