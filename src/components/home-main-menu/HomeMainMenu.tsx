@@ -145,7 +145,8 @@ function HomeMainMenu({ handleCloseNavMenu, isMenuOpen }: { handleCloseNavMenu: 
 									onClick={() => {
 										setChosenMenuNavItem(item);
 										setIsMenuItemsListOpen(true);
-									}}>
+									}}
+									className={`${chosenMenuNavItem?.label === item.label && `selected-menu-list-label`}`}>
 									<span>{item.label}</span>
 									<IoChevronForward size={".7rem"} color={"#C7C8CD"} />
 								</button>
