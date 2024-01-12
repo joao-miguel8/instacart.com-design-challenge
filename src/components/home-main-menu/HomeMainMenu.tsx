@@ -1,4 +1,4 @@
-import { IoChevronForward, IoClose } from "react-icons/io5";
+import { IoChevronBack, IoChevronForward, IoClose } from "react-icons/io5";
 import { IoIosCheckmark } from "react-icons/io";
 import Flag from "react-world-flags";
 import InstaCartLogo from "../../assets/nav-carrot-logo.webp";
@@ -9,6 +9,11 @@ import { useState } from "react";
 type CountrySelectionOptionsType = {
 	flag: string;
 	name: string;
+};
+
+type NavListType = {
+	label: string;
+	dropDownItems: string[];
 };
 
 function ChangeCountryPopup({
@@ -62,15 +67,50 @@ function ChangeCountryPopup({
 	);
 }
 
-function HomeMainMenu({ handleCloseNavMenu, isMenuOpen }: { handleCloseNavMenu: () => void; isMenuOpen: boolean }) {
-	const navList = [{ label: "Departments" }, { label: "More ways to shop" }, { label: "Help" }];
+function SelectedMenuItemList({ menuItems, isMenuItemsListOpen, setIsMenuItemsListOpen }: { menuItems: Pick<NavListType, "dropDownItems">; isMenuItemsListOpen: Boolean; setIsMenuItemsListOpen: (val: boolean) => void }) {
+	return (
+		<>
+			{isMenuItemsListOpen && (
+				<div className="nav-menu-dropdown-container">
+					<button onClick={() => setIsMenuItemsListOpen(false)}>
+						<IoChevronBack size={".7rem"} color={"#C7C8CD"} />
+						<h5>Back to main menu</h5>
+					</button>
+					<ul>
+						{menuItems.map((navItem: NavListType) => {
+							return (
+								<li>
+									<button className="dropdown-menu-item-btn">
+										<span>{navItem}</span>
+									</button>
+								</li>
+							);
+						})}
+					</ul>
+				</div>
+			)}
+		</>
+	);
+}
 
-	const [isCloseCountryChoicePopupOpen, setIsCloseCountryChoicePopupOpen] = useState(false);
+function HomeMainMenu({ handleCloseNavMenu, isMenuOpen }: { handleCloseNavMenu: () => void; isMenuOpen: boolean }) {
+	const navList: NavListType[] = [
+		{ label: "Departments", dropDownItems: ["Food", "Pantry", "Seafood", "Baked goods", "Dairy", "Fresh produce", "Deli"] },
+		{ label: "More ways to shop", dropDownItems: ["Shop by location", "Shop online Deals", "Send Gifts", "Alcohol", "Convenience"] },
+		{ label: "Help", dropDownItems: ["Contact", "Press", "Blog", "Help", "Careers", "Privacy", "Terms"] },
+	];
 
 	const countrySelection: CountrySelectionOptionsType[] = [
 		{ flag: "US", name: "United States" },
 		{ flag: "CA", name: "Canada" },
 	];
+
+	const [isMenuItemsListOpen, setIsMenuItemsListOpen] = useState(false);
+
+	const [isCloseCountryChoicePopupOpen, setIsCloseCountryChoicePopupOpen] = useState(false);
+
+	const [selectedMenuItemList, setSelectedMenuItemList] = useState<string[]>([]);
+
 	const [countrySelected, setCountrySelected] = useState(countrySelection[0]);
 
 	return (
@@ -93,13 +133,23 @@ function HomeMainMenu({ handleCloseNavMenu, isMenuOpen }: { handleCloseNavMenu: 
 					</nav>
 				</header>
 				<div className="menu-list">
-					{navList.map(item => (
-						<button key={item.label}>
-							<span>{item.label}</span>
-							<IoChevronForward size={".7rem"} color={"#C7C8CD"} />
-						</button>
-					))}
+					{navList.map((item: NavListType) => {
+						return (
+							<div>
+								<button
+									onClick={() => {
+										setSelectedMenuItemList(item.dropDownItems);
+										setIsMenuItemsListOpen(true);
+									}}
+									key={item.label}>
+									<span>{item.label}</span>
+									<IoChevronForward size={".7rem"} color={"#C7C8CD"} />
+								</button>
+							</div>
+						);
+					})}
 				</div>
+				<SelectedMenuItemList menuItems={selectedMenuItemList} isMenuItemsListOpen={isMenuItemsListOpen} setIsMenuItemsListOpen={setIsMenuItemsListOpen} />
 				{/* country select */}
 				<button key={countrySelected.name} onClick={() => setIsCloseCountryChoicePopupOpen(true)} className="menu-open-change-country-btn">
 					<div className="nav-country">
