@@ -2,6 +2,7 @@ import { IoChevronBack, IoChevronForward, IoClose } from "react-icons/io5";
 import { IoIosCheckmark } from "react-icons/io";
 import Flag from "react-world-flags";
 import InstaCartLogo from "../../assets/nav-carrot-logo.webp";
+import InstaCartLogoLg from "../../assets/instacart-logo-lg.webp";
 import "./homeMainMenu.css";
 import "../../App.css";
 import { useState } from "react";
@@ -117,16 +118,19 @@ function HomeMainMenu({ handleCloseNavMenu, isMenuOpen }: { handleCloseNavMenu: 
 		<>
 			<div className="menu-container">
 				<header className="menu-open-header">
-					<nav className="header-nav">
-						<div className="nav-left">
-							<button onClick={handleCloseNavMenu} className="nav-menu-button">
+					<nav className="menu-open-header-nav">
+						<div className="nav-menu-open-left">
+							<button onClick={handleCloseNavMenu} className="nav-close-menu-button">
 								<IoClose size="1.6rem" />
 							</button>
-							<a href="#">
-								<img className="nav-left-instacart-logo" src={InstaCartLogo} alt="instacart logo" />
+							<a href="#" className="nav-menu-open-left-instacart-logo">
+								<img src={InstaCartLogo} alt="instacart logo" />
+							</a>
+							<a href="#" className="nav-menu-open-instacart-lg-logo">
+								<img src={InstaCartLogoLg} alt="instacart logo" />
 							</a>
 						</div>
-						<div className="nav-right">
+						<div className="nav-right-menu-open">
 							<button>Log in</button>
 							<button>Sign up</button>
 						</div>
