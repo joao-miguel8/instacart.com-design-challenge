@@ -68,7 +68,7 @@ function ChangeCountryPopup({
 	);
 }
 
-function SelectedMenuItemList({ menuItems, isMenuItemsListOpen, setIsMenuItemsListOpen }: { menuItems: Pick<NavListType, "dropDownItems">; isMenuItemsListOpen: Boolean; setIsMenuItemsListOpen: (val: boolean) => void }) {
+function SelectedMenuItemList({ menuItems, isMenuItemsListOpen, setIsMenuItemsListOpen }: { menuItems: string[]; isMenuItemsListOpen: Boolean; setIsMenuItemsListOpen: (val: boolean) => void }) {
 	return (
 		<>
 			{isMenuItemsListOpen && (
@@ -164,6 +164,8 @@ function HomeMainMenu({ handleCloseNavMenu, isMenuOpen }: { handleCloseNavMenu: 
 				</button>
 				<ChangeCountryPopup isCloseCountryChoicePopupOpen={isCloseCountryChoicePopupOpen} setIsCloseCountryChoicePopupOpen={setIsCloseCountryChoicePopupOpen} countryOptions={countrySelection} countrySelected={countrySelected} setCountrySelected={setCountrySelected} />
 			</div>
+			{/* MENU OPEN OVERLAY */}
+			{isMenuOpen && <div onClick={handleCloseNavMenu} className="nav-menu-open-overlay"></div>}
 		</>
 	);
 }
