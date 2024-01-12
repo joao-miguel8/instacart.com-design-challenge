@@ -68,7 +68,7 @@ function ChangeCountryPopup({
 	);
 }
 
-function SelectedMenuItemList({ menuItems, isMenuItemsListOpen, setIsMenuItemsListOpen }: { menuItems: string[]; isMenuItemsListOpen: Boolean; setIsMenuItemsListOpen: (val: boolean) => void }) {
+function SelectedMenuItemList({ menuItems, isMenuItemsListOpen, setIsMenuItemsListOpen }: { menuItems: NavListType | null; isMenuItemsListOpen: Boolean; setIsMenuItemsListOpen: (val: boolean) => void }) {
 	return (
 		<>
 			{isMenuItemsListOpen && (
@@ -78,15 +78,16 @@ function SelectedMenuItemList({ menuItems, isMenuItemsListOpen, setIsMenuItemsLi
 						<h5>Back to main menu</h5>
 					</button>
 					<ul>
-						{menuItems.map((navItem: NavListType) => {
-							return (
-								<li>
-									<button className="dropdown-menu-item-btn">
-										<span>{navItem}</span>
-									</button>
-								</li>
-							);
-						})}
+						{menuItems !== null &&
+							menuItems.dropDownItems.map((navItem: string) => {
+								return (
+									<li key={navItem}>
+										<button className="dropdown-menu-item-btn">
+											<span>{navItem}</span>
+										</button>
+									</li>
+								);
+							})}
 					</ul>
 				</div>
 			)}
@@ -110,7 +111,7 @@ function HomeMainMenu({ handleCloseNavMenu, isMenuOpen }: { handleCloseNavMenu: 
 
 	const [isCloseCountryChoicePopupOpen, setIsCloseCountryChoicePopupOpen] = useState(false);
 
-	const [selectedMenuItemList, setSelectedMenuItemList] = useState<string[]>([]);
+	const [chosenMenuNavItem, setChosenMenuNavItem] = useState<NavListType | null>(null);
 
 	const [countrySelected, setCountrySelected] = useState(countrySelection[0]);
 
@@ -137,15 +138,14 @@ function HomeMainMenu({ handleCloseNavMenu, isMenuOpen }: { handleCloseNavMenu: 
 					</nav>
 				</header>
 				<div className="menu-list">
-					{navList.map((item: NavListType) => {
+					{navList.map(item => {
 						return (
-							<div>
+							<div key={item.label}>
 								<button
 									onClick={() => {
-										setSelectedMenuItemList(item.dropDownItems);
+										setChosenMenuNavItem(item);
 										setIsMenuItemsListOpen(true);
-									}}
-									key={item.label}>
+									}}>
 									<span>{item.label}</span>
 									<IoChevronForward size={".7rem"} color={"#C7C8CD"} />
 								</button>
@@ -153,7 +153,7 @@ function HomeMainMenu({ handleCloseNavMenu, isMenuOpen }: { handleCloseNavMenu: 
 						);
 					})}
 				</div>
-				<SelectedMenuItemList menuItems={selectedMenuItemList} isMenuItemsListOpen={isMenuItemsListOpen} setIsMenuItemsListOpen={setIsMenuItemsListOpen} />
+				<SelectedMenuItemList menuItems={chosenMenuNavItem} isMenuItemsListOpen={isMenuItemsListOpen} setIsMenuItemsListOpen={setIsMenuItemsListOpen} />
 				{/* country select */}
 				<button key={countrySelected.name} onClick={() => setIsCloseCountryChoicePopupOpen(true)} className="menu-open-change-country-btn">
 					<div className="nav-country">
