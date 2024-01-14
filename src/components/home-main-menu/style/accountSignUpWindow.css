@@ -1,0 +1,184 @@
+.sign-in-container {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 10px;
+	border-radius: 8px 8px 0 0;
+	background: white;
+}
+
+.sign-in-options-and-input-wrapper {
+	margin-top: 24px;
+	padding: 0px 16px 4px;
+}
+
+.sign-in-container-header {
+	margin-top: 10px;
+}
+
+.sign-in-container-header svg {
+	left: 10px;
+	position: absolute;
+}
+
+.sign-in-container-header h2 {
+	font-size: 18px;
+	font-weight: 700;
+	text-align: center;
+}
+
+.sign-in-options-container {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	gap: 12px;
+}
+
+.sign-in-options-container button {
+	height: 38px;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	gap: 4px;
+	border: 1px solid rgb(199, 200, 205);
+	border-radius: 24px;
+}
+
+.sign-in-option-icons {
+	width: 28px;
+	display: flex;
+}
+
+.sign-in-option-icons svg {
+	width: 100%;
+}
+
+.sign-in-options-container span {
+	font-size: 14px;
+	width: 100%;
+	text-align: center;
+	font-weight: 500;
+}
+
+.sign-in-options-input-divider {
+	margin: 24px 0px;
+	font-size: 12px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+}
+
+.sign-in-options-input-divider:before,
+.sign-in-options-input-divider:after {
+	content: "";
+	flex: 1;
+	border-bottom: 1px solid rgb(232, 233, 235);
+}
+
+.sign-in-prompt-msg {
+	margin: 12px 0;
+	font-size: 15px;
+}
+
+.email-or-input-container {
+	margin: 12px 0px;
+	height: fit-content;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+}
+
+.email-or-input-container input {
+	font-size: 17px;
+	border-radius: 12px;
+	padding: 22px 12px 8px;
+	border: 1px solid #343538;
+}
+
+.terms-and-conditions-signUp {
+	max-width: 300px;
+	font-size: 12px;
+}
+
+.terms-and-conditions-signUp a {
+	text-decoration: none;
+	font-weight: 500;
+	color: rgb(14, 125, 14);
+}
+
+.sign-up-email-or-input-label {
+	margin: 0 0 0 10px;
+	width: fit-content;
+	position: absolute;
+	font-size: 20px;
+	transform: translateY(20px);
+	transition: all 0.2s ease-in-out;
+}
+
+/* Change label position of input if focused */
+/* Return to the original position when not focused  */
+.email-or-input-container input:valid + label,
+input:focus + label {
+	font-size: 12px;
+	transform: translateY(8px);
+}
+
+.signUp-continue-btn {
+	margin: 12px 0px;
+	height: 56px;
+	width: 100%;
+	border-radius: 12px;
+	color: rgb(255, 255, 255);
+	background: rgb(14, 125, 14);
+}
+
+.signUp-continue-btn span {
+	font-size: 17px;
+	font-weight: 600;
+}
+
+/* ======================== */
+/*  --------- SIGN UP CONTAINER */
+/* ======================== */
+
+.signUp-log-in-container {
+	padding-top: 10px;
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	border-top: 1px solid rgb(232, 233, 235);
+}
+
+.signUp-log-in-container p {
+	margin: 12px 0px;
+	font-size: 15px;
+}
+
+.signUp-log-in-container button {
+	margin: 0px 0 18px 0px;
+}
+.signUp-log-in-container button span {
+	font-size: 17px;
+	font-weight: 600;
+	color: rgb(14, 125, 14);
+}
+
+/* ==================== */
+/* HOVER & EFFECTS */
+/* ==================== */
+
+.sign-in-options-container button:hover {
+	background: #f3f4f5;
+}
+
+.email-or-input-container input:focus {
+	outline: 1px solid rgb(52, 53, 56);
+}
+
+.signUp-continue-btn:hover {
+	background: #0b730b;
+}
