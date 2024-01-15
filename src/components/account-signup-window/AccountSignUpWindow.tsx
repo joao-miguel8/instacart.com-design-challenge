@@ -14,11 +14,31 @@ export function AccountSignUpWindow({ loginSignUpStatus, setLoginSignUpStatus }:
 		size: "1.6rem",
 	};
 
+	const [signUpInputs, setSignUpInputs] = useState({
+		emailInput: "",
+		phoneInput: "",
+	});
+
 	const signUpOptions: SignUpOptionsMapAsType = {
 		google: { icon: <FcGoogle size={signUpLogoIcons.size} />, title: "Continue with Google" },
 		facebook: { icon: <FaFacebook size={signUpLogoIcons.size} color={"#4267B2"} />, title: "Continue with Facebook" },
-		phone: { icon: <BsFillTelephoneOutboundFill size={signUpLogoIcons.size} />, title: "Continue with Phone", onClick: () => setShowEmail(true) },
-		email: { icon: <MdEmail size={signUpLogoIcons.size} />, onClick: () => setShowEmail(false), title: "Continue with Email" },
+		phone: {
+			icon: <BsFillTelephoneOutboundFill size={signUpLogoIcons.size} />,
+			title: "Continue with Phone",
+			onClick: () => {
+				setShowEmail(true);
+				setSignUpInputs({ ...signUpInputs, phoneInput: "" });
+			},
+		},
+
+		email: {
+			icon: <MdEmail size={signUpLogoIcons.size} />,
+			onClick: () => {
+				setShowEmail(false);
+				setSignUpInputs({ ...signUpInputs, emailInput: "" });
+			},
+			title: "Continue with Email",
+		},
 	};
 
 	const [showEmail, setShowEmail] = useState(false);
@@ -56,15 +76,27 @@ export function AccountSignUpWindow({ loginSignUpStatus, setLoginSignUpStatus }:
 					</div>
 					<div className="personal-sign-up-input-container">
 						<div className="sign-in-options-input-divider">or</div>
-						<p className="sign-in-prompt-msg">Enter your email to get started</p>
-						{
-							<div className="email-or-input-container">
-								<input required type="text" name="email" />
-								<label className="sign-up-email-or-input-label" htmlFor="email">
-									Email
-								</label>
-							</div>
-						}
+						{showEmail === true ? (
+							<>
+								<p className="sign-in-prompt-msg">Enter your Phone number to get started</p>
+								<div className="email-or-input-container">
+									<input onChange={e => setSignUpInputs({ ...signUpInputs, phoneInput: e.target.value })} required type="tel" name="phoneNumber" value={signUpInputs.phoneInput} />
+									<label className="sign-up-email-or-input-label" htmlFor="phoneNumber">
+										Phone Number
+									</label>
+								</div>
+							</>
+						) : (
+							<>
+								<p className="sign-in-prompt-msg">Enter your Email to get started</p>
+								<div className="email-or-input-container">
+									<input onChange={e => setSignUpInputs({ ...signUpInputs, emailInput: e.target.value })} required type="text" name="email" value={signUpInputs.emailInput} />
+									<label className="sign-up-email-or-input-label" htmlFor="email">
+										Email
+									</label>
+								</div>
+							</>
+						)}
 						<p className="terms-and-conditions-signUp">
 							By continuing, you agree to our
 							<a href="#">Terms of Service</a> & <a href="#">Privacy Policy</a>.
