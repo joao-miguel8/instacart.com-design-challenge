@@ -4,19 +4,22 @@ import { FaFacebook } from "react-icons/fa";
 import { BsFillTelephoneOutboundFill } from "react-icons/bs";
 import "../home-main-menu/style/accountSignUpWindow.css";
 import "../../App.css";
-import type { SignUpOptionsTypes } from "../home-main-menu/types/SignUpOptionsType";
+import type { SignUpOptionsType, SignUpOptionsMapAsType } from "../home-main-menu/types/SignUpOptionsType";
 import type { LoginSignUpStatusType } from "./types/LoginSignUpStatusType";
+import { useState } from "react";
 
 export function AccountSignUpWindow({ loginSignUpStatus, setLoginSignUpStatus }: { loginSignUpStatus: LoginSignUpStatusType; setLoginSignUpStatus: (status: LoginSignUpStatusType) => void }) {
 	const signUpLogoIcons = {
 		size: "1.6rem",
 	};
 
-	const signUpOptions: SignUpOptionsType[] = [
-		{ icon: <FcGoogle size={signUpLogoIcons.size} />, title: "Continue with Google" },
-		{ icon: <FaFacebook size={signUpLogoIcons.size} color={"#4267B2"} />, title: "Continue with Facebook" },
-		{ icon: <BsFillTelephoneOutboundFill size={signUpLogoIcons.size} />, title: "Continue with Phone" },
-	];
+	const signUpOptions: SignUpOptionsMapAsType = {
+		google: { icon: <FcGoogle size={signUpLogoIcons.size} />, title: "Continue with Google" },
+		facebook: { icon: <FaFacebook size={signUpLogoIcons.size} color={"#4267B2"} />, title: "Continue with Facebook" },
+		phone: { icon: <BsFillTelephoneOutboundFill size={signUpLogoIcons.size} />, title: "Continue with Phone" },
+	};
+
+	const [selectedSignUpOptions, setSelectedSignUpOptions] = useState(signUpOptions.google);
 
 	return (
 		<>
@@ -29,9 +32,9 @@ export function AccountSignUpWindow({ loginSignUpStatus, setLoginSignUpStatus }:
 				</div>
 				<div className="sign-in-options-and-input-wrapper">
 					<div className="sign-in-options-container">
-						{signUpOptions.map(option => {
+						{Object.entries(signUpOptions).map(([key, option]) => {
 							return (
-								<button key={option.title}>
+								<button key={key}>
 									<div className="sign-in-option-icons">{option.icon}</div>
 									<span>{option.title}</span>
 								</button>

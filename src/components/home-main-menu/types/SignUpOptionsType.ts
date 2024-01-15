@@ -1,6 +1,8 @@
-import { ReactElement } from "react";
-
 export type SignUpOptionsType = {
-	icon: ReactElement;
+	icon: React.ReactNode;
 	title: string;
+};
+
+export type SignUpOptionsMapAsType = {
+	[key: string]: SignUpOptionsType;
 };
