@@ -1,11 +1,12 @@
 import { RxHamburgerMenu } from "react-icons/rx";
-import InstaCartLogo from "../../assets/nav-carrot-logo.webp";
 import "../../App.css";
 import "../header/header.css";
-import HomeMainMenu from "../home-main-menu/HomeMainMenu";
+import InstaCartLogo from "../../assets/nav-carrot-logo.webp";
 import InstaCartLogoLg from "../../assets/instacart-logo-lg.webp";
+import HomeMainMenu from "../home-main-menu/HomeMainMenu";
+import type { LoginSignUpStatusType } from "../account-signup-window/types/LoginSignUpStatusType";
 
-function Header({ handleCloseMainMenu, isMenuOpen }: { handleCloseNavMenu?: () => void | undefined; isMenuOpen?: boolean }) {
+function Header({ handleCloseMainMenu, isMenuOpen, loginSignUpStatus, setLoginSignUpStatus }: { handleCloseMainMenu?: () => void | undefined; isMenuOpen?: boolean; loginSignUpStatus: LoginSignUpStatusType; setLoginSignUpStatus: (status: LoginSignUpStatusType) => void }) {
 	return (
 		<>
 			<header className="header">
@@ -28,11 +29,11 @@ function Header({ handleCloseMainMenu, isMenuOpen }: { handleCloseNavMenu?: () =
 
 					<div className="nav-right">
 						<button>Log in</button>
-						<button>Sign up</button>
+						<button onClick={() => setLoginSignUpStatus({ ...loginSignUpStatus, isLoginEnabled: false })}>Sign up</button>
 					</div>
 				</nav>
 			</header>
-			{isMenuOpen && <HomeMainMenu handleCloseNavMenu={handleCloseMainMenu} isMenuOpen={isMenuOpen} />}
+			{isMenuOpen && <HomeMainMenu handleCloseNavMenu={handleCloseMainMenu} isMenuOpen={isMenuOpen} loginSignUpStatus={loginSignUpStatus} setLoginSignUpStatus={setLoginSignUpStatus} />}
 		</>
 	);
 }
