@@ -193,7 +193,7 @@ export function AccountSignUpWindow({ loginSignUpStatus, setLoginSignUpStatus }:
 					</div>
 				</div>
 			</div>
-			{loginSignUpStatus.isSignUpEnabled && <div className="account-sign-up-window-overlay"></div>}
+			{loginSignUpStatus.isSignUpEnabled && <div onClick={() => setLoginSignUpStatus({ ...loginSignUpStatus, isSignUpEnabled: false })} className="account-sign-up-window-overlay"></div>}
 		</>
 	);
 }
