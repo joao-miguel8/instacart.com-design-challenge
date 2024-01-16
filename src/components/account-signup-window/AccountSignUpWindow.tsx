@@ -21,6 +21,12 @@ export function AccountSignUpWindow({ loginSignUpStatus, setLoginSignUpStatus }:
 		phoneInput: "",
 	});
 
+	const [loginInputs, setLoginInputs] = useState({
+		emailInput: "",
+		passwordInput: "",
+		phoneInput: "",
+	});
+
 	const signUpOptions: SignUpOptionsMapAsType = {
 		google: { icon: <FcGoogle size={signUpLogoIcons.size} />, title: "Continue with Google" },
 		facebook: { icon: <FaFacebook size={signUpLogoIcons.size} color={"#4267B2"} />, title: "Continue with Facebook" },
@@ -30,6 +36,7 @@ export function AccountSignUpWindow({ loginSignUpStatus, setLoginSignUpStatus }:
 			onClick: () => {
 				setShowEmail(true);
 				setSignUpInputs({ ...signUpInputs, phoneInput: "" });
+				setLoginInputs({ ...loginInputs, phoneInput: "" });
 			},
 		},
 
@@ -38,6 +45,8 @@ export function AccountSignUpWindow({ loginSignUpStatus, setLoginSignUpStatus }:
 			onClick: () => {
 				setShowEmail(false);
 				setSignUpInputs({ ...signUpInputs, emailInput: "" });
+				setLoginInputs({ ...loginInputs, emailInput: "" });
+				setLoginInputs({ ...loginInputs, passwordInput: "" });
 			},
 			title: "Continue with Email",
 		},
@@ -83,9 +92,11 @@ export function AccountSignUpWindow({ loginSignUpStatus, setLoginSignUpStatus }:
 						<>
 							{toggleLoginOption !== false && (
 								<>
+									{/* SIGN UP PHONE INPUT | EMAIL INPUT */}
 									{showEmail === true ? (
 										<>
 											<p className="sign-in-prompt-msg">Enter your Phone number to get started</p>
+											{/* Sign up Phone Input */}
 											<div className="email-or-input-container">
 												<input onChange={e => setSignUpInputs({ ...signUpInputs, phoneInput: e.target.value })} required type="tel" name="phoneNumber" value={signUpInputs.phoneInput} />
 												<label className="sign-up-email-or-input-label" htmlFor="phoneNumber">
@@ -102,6 +113,7 @@ export function AccountSignUpWindow({ loginSignUpStatus, setLoginSignUpStatus }:
 									) : (
 										<>
 											<p className="sign-in-prompt-msg">Enter your Email to get started</p>
+											{/* Sign Up Email Input */}
 											<div className="email-or-input-container">
 												<input onChange={e => setSignUpInputs({ ...signUpInputs, emailInput: e.target.value })} required type="text" name="email" value={signUpInputs.emailInput} />
 												<label className="sign-up-email-or-input-label" htmlFor="email">
@@ -124,11 +136,13 @@ export function AccountSignUpWindow({ loginSignUpStatus, setLoginSignUpStatus }:
 						{/* -----------------LOGIN SECTION----------------- */}
 						{!toggleLoginOption && (
 							<>
+								{/* LOG IN PHONE INPUT | EMAIL AND PASSWORD INPUT */}
 								{showEmail ? (
 									<div>
 										<p className="sign-in-prompt-msg">Enter your Phone number to get started</p>
+										{/* Login Phone Input */}
 										<div className="email-or-input-container">
-											<input onChange={e => setSignUpInputs({ ...signUpInputs, phoneInput: e.target.value })} required type="tel" name="phoneNumber" value={signUpInputs.phoneInput} />
+											<input onChange={e => setLoginInputs({ ...loginInputs, phoneInput: e.target.value })} required type="tel" name="phoneNumber" value={loginInputs.phoneInput} />
 											<label className="sign-up-email-or-input-label" htmlFor="phoneNumber">
 												Phone Number
 											</label>
@@ -136,20 +150,23 @@ export function AccountSignUpWindow({ loginSignUpStatus, setLoginSignUpStatus }:
 										<p className="terms-and-conditions-phone-sign-up">
 											We will send a text with a verification code. Message and data rates may apply. By continuing, you agree to our <a href="#">Terms of Service</a> & <a href="#">Privacy Policy</a>.
 										</p>
-										<button className="sign-up-continue-btn">
+										<button className="login-btn">
 											<span>Continue</span>
 										</button>
 									</div>
 								) : (
+									// --------- LOGIN EMAIL AND PASSWORD INPUTS ---------
 									<div className="login-inputs-container">
+										{/* Login Email Input */}
 										<div className="login-email-input-container">
-											<input required type="text" name="email" />
+											<input onChange={e => setLoginInputs({ ...loginInputs, emailInput: e.target.value })} required type="text" name="email" />
 											<label className="login-email-label-input" htmlFor="email">
 												Email
 											</label>
 										</div>
+										{/* Login Password Input */}
 										<div className="login-password-input-container">
-											<input required type="text" name="password" />
+											<input onChange={e => setLoginInputs({ ...loginInputs, passwordInput: e.target.value })} required type="password" name="password" />
 											<label className="login-password-label-input" htmlFor="password">
 												Password
 											</label>

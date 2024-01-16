@@ -280,6 +280,7 @@ input:focus + label {
 }
 
 .login-btn {
+	margin: 12px 0;
 	height: 56px;
 	width: 100%;
 	border-radius: 12px;
