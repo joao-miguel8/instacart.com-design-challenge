@@ -108,17 +108,26 @@
 
 .email-or-input-container input {
 	font-size: 17px;
-	border-radius: 12px;
 	padding: 22px 12px 8px;
+	border-radius: 12px;
 	border: 1px solid #343538;
 }
 
-.terms-and-conditions-signUp {
-	max-width: 300px;
+.terms-and-conditions-email-signUp {
+	margin: 12px 0px;
 	font-size: 12px;
 }
 
-.terms-and-conditions-signUp a {
+.terms-and-conditions-email-signUp a {
+	text-decoration: none;
+	font-weight: 500;
+	color: rgb(14, 125, 14);
+}
+
+.terms-and-conditions-phone-signUp {
+	font-size: 12px;
+}
+.terms-and-conditions-phone-signUp a {
 	text-decoration: none;
 	font-weight: 500;
 	color: rgb(14, 125, 14);
@@ -182,6 +191,100 @@ input:focus + label {
 	font-size: 17px;
 	font-weight: 600;
 	color: rgb(14, 125, 14);
+}
+
+/* ========================= */
+/* --------- LOGIN FORM ------------- */
+/* ============================= */
+
+/* <<<<< LOGIN INPUTS >>>>>>>*/
+
+.login-inputs-container {
+	position: relative;
+	transition: all 0.2s ease-in-out;
+}
+
+.login-inputs-container input {
+	font-size: 17px;
+	border-radius: 12px;
+	padding: 22px 12px 8px;
+	border: 1px solid #343538;
+}
+
+/*   LOGIN EMAIL LABEL INPUT   */
+
+.login-email-input-container {
+	display: flex;
+	flex-direction: column;
+}
+
+.login-email-input-container {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+}
+
+.login-email-input-container input:valid + label,
+.login-email-input-container input:focus + label {
+	font-size: 12px;
+	transform: translateY(6px);
+}
+
+.login-email-label-input {
+	position: absolute;
+	margin: 0 12px;
+	width: fit-content;
+	font-size: 20px;
+	transform: translateY(18px);
+	transition: all 0.2s ease-in-out;
+}
+
+/*  LOGIN PASSWORD LABEL INPUT  */
+
+.login-password-input-container {
+	margin-top: 12px;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	transition: all 0.2s ease-in-out;
+}
+
+.login-password-input-container input:valid + label,
+.login-password-input-container input:focus + label {
+	font-size: 12px;
+	transform: translateY(6px);
+}
+
+.login-password-label-input {
+	position: absolute;
+	margin: 0 0 0 10px;
+	width: fit-content;
+	font-size: 20px;
+	transform: translateY(18px);
+	transition: all 0.2s ease-in-out;
+}
+
+.forgot-password-container {
+	margin: 12px 0px;
+	display: flex;
+	align-items: center;
+	font-size: 15px;
+}
+
+.forgot-password-container button {
+	font-weight: 700;
+	font-size: 15px;
+	color: rgb(14, 125, 14);
+}
+
+.login-btn {
+	height: 56px;
+	width: 100%;
+	border-radius: 12px;
+	color: rgb(255, 255, 255);
+	background: rgb(14, 125, 14);
+	font-size: 17px;
+	font-weight: bold;
 }
 
 /* ==================== */
