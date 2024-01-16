@@ -46,8 +46,8 @@ export function AccountSignUpWindow({ loginSignUpStatus, setLoginSignUpStatus }:
 	const [showEmail, setShowEmail] = useState(false);
 
 	return (
-		<>
-			<div className={`sign-in-container ${loginSignUpStatus.isSignUpEnabled ? "sign-in-container-shown" : "sign-in-container-hidden"}`}>
+		<div>
+			<form className={`sign-in-container ${loginSignUpStatus.isSignUpEnabled ? "sign-in-container-shown" : "sign-in-container-hidden"}`}>
 				<div className="sign-in-container-header">
 					<button onClick={() => setLoginSignUpStatus({ ...loginSignUpStatus, isSignUpEnabled: false })}>
 						<IoClose size="1.4rem" color={"#343538"} />
@@ -92,10 +92,10 @@ export function AccountSignUpWindow({ loginSignUpStatus, setLoginSignUpStatus }:
 													Phone Number
 												</label>
 											</div>
-											<p className="terms-and-conditions-phone-signUp">
+											<p className="terms-and-conditions-phone-sign-up">
 												We will send a text with a verification code. Message and data rates may apply. By continuing, you agree to our <a href="#">Terms of Service</a> & <a href="#">Privacy Policy</a>.
 											</p>
-											<button className="signUp-continue-btn">
+											<button className="sign-up-continue-btn">
 												<span>Continue</span>
 											</button>
 										</>
@@ -107,11 +107,11 @@ export function AccountSignUpWindow({ loginSignUpStatus, setLoginSignUpStatus }:
 												<label className="sign-up-email-or-input-label" htmlFor="email">
 													Email
 												</label>
-												<p className="terms-and-conditions-email-signUp">
+												<p className="terms-and-conditions-email-sign-up">
 													By continuing, you agree to our
 													<a href="#">Terms of Service</a> & <a href="#">Privacy Policy</a>.
 												</p>
-												<button className="signUp-continue-btn">
+												<button className="sign-up-continue-btn">
 													<span>Continue</span>
 												</button>
 											</div>
@@ -133,10 +133,10 @@ export function AccountSignUpWindow({ loginSignUpStatus, setLoginSignUpStatus }:
 												Phone Number
 											</label>
 										</div>
-										<p className="terms-and-conditions-phone-signUp">
+										<p className="terms-and-conditions-phone-sign-up">
 											We will send a text with a verification code. Message and data rates may apply. By continuing, you agree to our <a href="#">Terms of Service</a> & <a href="#">Privacy Policy</a>.
 										</p>
-										<button className="signUp-continue-btn">
+										<button className="sign-up-continue-btn">
 											<span>Continue</span>
 										</button>
 									</div>
@@ -169,12 +169,12 @@ export function AccountSignUpWindow({ loginSignUpStatus, setLoginSignUpStatus }:
 						)}
 					</div>
 				</div>
-				<div className="signUp-log-in-container">
+				<div className="sign-up-log-in-container">
 					{toggleLoginOption ? <p>Already have an account?</p> : <p>Don't have an account?</p>}
 					<button onClick={() => setToggleLoginOption(prevVal => !prevVal)}>{toggleLoginOption ? <span>Log in</span> : <span>Sign up</span>}</button>
 				</div>
-			</div>
-			{loginSignUpStatus.isSignUpEnabled && <div className="account-signUp-window-overlay"></div>}
-		</>
+			</form>
+			{loginSignUpStatus.isSignUpEnabled && <div className="account-sign-up-window-overlay"></div>}
+		</div>
 	);
 }

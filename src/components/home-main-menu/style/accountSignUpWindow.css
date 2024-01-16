@@ -1,4 +1,4 @@
-.account-signUp-window-overlay {
+.account-sign-up-window-overlay {
 	z-index: 10;
 	position: absolute;
 	background: black;
@@ -19,6 +19,7 @@
 }
 
 .sign-in-container {
+	overflow: auto;
 	width: 100%;
 	height: 100%;
 	position: fixed;
@@ -114,21 +115,21 @@
 	border: 1px solid #343538;
 }
 
-.terms-and-conditions-email-signUp {
+.terms-and-conditions-email-sign-up {
 	margin: 12px 0px;
 	font-size: 12px;
 }
 
-.terms-and-conditions-email-signUp a {
+.terms-and-conditions-email-sign-up a {
 	text-decoration: none;
 	font-weight: 500;
 	color: rgb(14, 125, 14);
 }
 
-.terms-and-conditions-phone-signUp {
+.terms-and-conditions-phone-sign-up {
 	font-size: 12px;
 }
-.terms-and-conditions-phone-signUp a {
+.terms-and-conditions-phone-sign-up a {
 	text-decoration: none;
 	font-weight: 500;
 	color: rgb(14, 125, 14);
@@ -151,7 +152,7 @@ input:focus + label {
 	transform: translateY(8px);
 }
 
-.signUp-continue-btn {
+.sign-up-continue-btn {
 	margin: 12px 0px;
 	height: 56px;
 	width: 100%;
@@ -160,7 +161,7 @@ input:focus + label {
 	background: rgb(14, 125, 14);
 }
 
-.signUp-continue-btn span {
+.sign-up-continue-btn span {
 	font-size: 17px;
 	font-weight: 600;
 }
@@ -169,10 +170,10 @@ input:focus + label {
 /*  --------- SIGN UP CONTAINER */
 /* ======================== */
 
-.signUp-log-in-container {
+.sign-up-log-in-container {
 	padding-top: 10px;
 	width: 100%;
-	position: fixed;
+	position: relative;
 	bottom: 0;
 	display: flex;
 	flex-direction: column;
@@ -180,15 +181,15 @@ input:focus + label {
 	border-top: 1px solid rgb(232, 233, 235);
 }
 
-.signUp-log-in-container p {
+.sign-up-log-in-container p {
 	margin: 12px 0px;
 	font-size: 15px;
 }
 
-.signUp-log-in-container button {
+.sign-up-log-in-container button {
 	margin: 0px 0 18px 0px;
 }
-.signUp-log-in-container button span {
+.sign-up-log-in-container button span {
 	font-size: 17px;
 	font-weight: 600;
 	color: rgb(14, 125, 14);
@@ -300,6 +301,23 @@ input:focus + label {
 	outline: 1px solid rgb(52, 53, 56);
 }
 
-.signUp-continue-btn:hover {
+.sign-up-continue-btn:hover {
 	background: #0b730b;
+}
+
+@media (min-width: 725px) {
+	.sign-in-container-shown {
+		top: 60px;
+		width: 416px;
+		height: 600px;
+		position: fixed;
+		left: 50%;
+		bottom: 50%;
+		transform: translateX(-50%);
+		margin: 0 auto;
+	}
+
+	.sign-in-container-hidden {
+		display: none;
+	}
 }
