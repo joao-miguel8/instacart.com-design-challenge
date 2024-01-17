@@ -18,8 +18,12 @@ function Homepage() {
 		<>
 			<Header handleCloseMainMenu={() => handleCloseNavMenu()} isMenuOpen={isMenuOpen} loginSignUpStatus={loginSignUpStatus} setLoginSignUpStatus={setLoginSignUpStatus} />
 			{loginSignUpStatus.isSignUpEnabled && <AccountSignUpWindow loginSignUpStatus={loginSignUpStatus} setLoginSignUpStatus={setLoginSignUpStatus} />}
+
 			<div className={`bg-hero-img`}>
-				<h1>Order groceries for delivery or pickup today</h1>
+				<div>
+					<h1>Order groceries for delivery or pickup today</h1>
+					<p>Whatever you want from local stores, brought right to your door.</p>
+				</div>
 			</div>
 		</>
 	);
