@@ -55,12 +55,14 @@ export function AccountSignUpWindow({ loginSignUpStatus, setLoginSignUpStatus }:
 	const [showEmail, setShowEmail] = useState(false);
 
 	return (
-		// div className="sign-in-container-wrapper"
 		<>
 			<div className={`sign-in-container ${loginSignUpStatus.isSignUpEnabled ? "sign-in-container-shown" : "sign-in-container-hidden"}`}>
 				<div className="sign-in-header-and-options-wrapper">
 					<div className="sign-in-container-header">
-						<button onClick={() => setLoginSignUpStatus({ ...loginSignUpStatus, isSignUpEnabled: false })}>
+						<button
+							onClick={() => {
+								setLoginSignUpStatus({ ...loginSignUpStatus, isSignUpEnabled: false });
+							}}>
 							<IoClose size="1.4rem" color={"#343538"} />
 						</button>
 						{toggleLoginOption ? <h2>Sign up</h2> : <h2>Log in</h2>}
@@ -193,7 +195,13 @@ export function AccountSignUpWindow({ loginSignUpStatus, setLoginSignUpStatus }:
 					</div>
 				</div>
 			</div>
-			{loginSignUpStatus.isSignUpEnabled && <div onClick={() => setLoginSignUpStatus({ ...loginSignUpStatus, isSignUpEnabled: false })} className="account-sign-up-window-overlay"></div>}
+			{loginSignUpStatus.isSignUpEnabled && (
+				<div
+					onClick={() => {
+						setLoginSignUpStatus({ ...loginSignUpStatus, isSignUpEnabled: false });
+					}}
+					className="account-sign-up-window-overlay"></div>
+			)}
 		</>
 	);
 }

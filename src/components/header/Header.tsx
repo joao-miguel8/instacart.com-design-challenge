@@ -28,8 +28,8 @@ function Header({ handleCloseMainMenu, isMenuOpen, loginSignUpStatus, setLoginSi
 					</div>
 
 					<div className="nav-right">
-						<button>Log in</button>
-						<button onClick={() => setLoginSignUpStatus({ ...loginSignUpStatus, isLoginEnabled: false })}>Sign up</button>
+						<button onClick={() => setLoginSignUpStatus({ ...loginSignUpStatus, isSignUpEnabled: true })}>Log in</button>
+						<button onClick={() => setLoginSignUpStatus({ ...loginSignUpStatus, isSignUpEnabled: true })}>Sign up</button>
 					</div>
 				</nav>
 			</header>
