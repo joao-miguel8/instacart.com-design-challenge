@@ -70,6 +70,64 @@
 	border-radius: 8px;
 }
 
+/* <<<<<<<< GROCERY DELIVERY BENEFIT SECTION >>>>>>>>> */
+
+.grocery-delivery-benefits-container {
+	margin: 60px auto;
+	padding: 0 16px;
+}
+.grocery-delivery-benefits-container h2 {
+	padding-bottom: 32px;
+	font-size: 29px;
+	font-weight: 700;
+	text-align: center;
+	color: #343538;
+}
+
+.grocery-delivery-benefits-wrapper {
+	overflow: auto;
+}
+
+.grocery-delivery-scroll-container {
+	padding-bottom: 10px;
+	width: 1000px;
+	display: flex;
+	gap: 10px;
+}
+
+.grocery-delivery-benefit-card {
+	width: 343px;
+	background: rgb(246, 247, 248);
+	border-radius: 0 0 12px 12px;
+}
+
+.grocery-delivery-benefit-card-img-wrapper {
+	width: 100%;
+	overflow: hidden;
+	border-radius: 12px 12px 0 0;
+}
+
+.grocery-delivery-benefit-card-img-wrapper img {
+	width: 100%;
+}
+
+.grocery-delivery-benefit-card-text-content {
+	padding: 32px 24px;
+}
+
+.grocery-delivery-benefit-card-text-content h3 {
+	margin-bottom: 12px;
+	font-weight: 600;
+	font-size: 21px;
+	color: #343538;
+}
+
+.grocery-delivery-benefit-card-text-content p {
+	color: #343538;
+	font-size: 14px;
+	line-height: 20px;
+}
+
 /* ============================= */
 /* <<<<<<<< MEDIA QUERIES >>>>>>>>> */
 /* ============================= */
