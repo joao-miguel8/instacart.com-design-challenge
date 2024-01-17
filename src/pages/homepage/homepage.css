@@ -1,3 +1,4 @@
+/* <<<<<<<< HERO-SECTION >>>>>>>>> */
 .bg-hero-img {
 	width: 100%;
 	height: 400px;
@@ -20,6 +21,79 @@
 	bottom: 50%;
 }
 
+/* <<<<<<<< QR CODE CALL TO ACTION SECTION >>>>>>>>> */
+.qr-code-cta-container {
+	padding: 20px;
+	margin: 100px 0 0 0;
+	display: flex;
+	flex-direction: column-reverse;
+	justify-content: space-between;
+	gap: 4px;
+	align-items: center;
+	border-radius: 8px;
+	background: rgb(177, 229, 213);
+	box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.16);
+}
+
+.qr-code-cta-container div {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	justify-content: center;
+	line-height: 20px;
+	text-align: center;
+}
+
+.qr-code-cta-container img:first-of-type {
+	width: 267px;
+	display: none;
+}
+
+.qr-code-cta-container h2 {
+	padding: 10px 0;
+	font-size: 21px;
+	font-weight: 700;
+}
+
+.qr-code-cta-container p {
+	font-size: 14px;
+}
+
+.qr-code-cta-img {
+	width: 100px;
+	height: 100px;
+	border-radius: 8px;
+	/* margin-left: 10px; */
+	/* margin: auto; */
+}
+
+/* ============================= */
+/* <<<<<<<< MEDIA QUERIES >>>>>>>>> */
+/* ============================= */
+
+@media (min-width: 450px) {
+	.qr-code-cta-container {
+		padding: 0;
+		flex-direction: row;
+		justify-content: space-between;
+		gap: 0;
+	}
+
+	.qr-code-cta-container div {
+		margin-left: 30px;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: start;
+		gap: 0;
+		line-height: 20px;
+		text-align: center;
+	}
+}
+
+/* =================================== */
+/* =================================== */
+
 @media (min-width: 750px) {
 	.bg-hero-img {
 		position: relative;
@@ -35,7 +109,6 @@
 	.bg-hero-img div {
 		margin-left: 120px;
 		width: fit-content;
-		/* margin: auto; */
 		height: 100%;
 		display: flex;
 		flex-direction: column;
@@ -55,7 +128,17 @@
 		display: inline-block;
 		font-size: 14px;
 	}
+
+	.qr-code-cta-container div {
+		margin-left: 0px;
+	}
+	.qr-code-cta-container img:first-of-type {
+		display: inline;
+	}
 }
+
+/* ======================== */
+/* ======================== */
 
 @media (min-width: 900px) {
 	.bg-hero-img {
