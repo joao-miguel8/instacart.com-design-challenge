@@ -1,0 +1,17 @@
+.bg-hero-img {
+	position: relative;
+	background-image: url("src/assets/hero-homepage-bg.jpeg");
+	background-size: cover;
+	width: 100%;
+	height: 400px;
+}
+
+.bg-hero-img h1 {
+	margin-left: 20px;
+	width: 256px;
+	line-height: 32px;
+	font-weight: 700;
+	font-size: 29px;
+	position: absolute;
+	bottom: 50%;
+}
