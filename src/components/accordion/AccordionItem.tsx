@@ -3,11 +3,11 @@ import type { AccordionItemType } from "./types/AccordionItemType";
 
 // Read and see the example in Accordion.tsx to see how this component works with the Accordion functionality
 
-function AccordionItem({ children, accordionTitleContainer, accordionTitleContainerStyling, accordionContentContainerStyling }: AccordionItemType) {
+function AccordionItem({ children, accordionTitleContainer, accordionTitleContainerStyling, accordionItemWrapper, accordionContentContainerStyling }: AccordionItemType) {
 	const [isOpen, setIsOpen] = useState(false);
 
 	return (
-		<div>
+		<div className={!accordionItemWrapper ? "accordion-item-wrapper" : accordionItemWrapper}>
 			<button className={`${!accordionTitleContainerStyling ? "accordion-title-container" : accordionTitleContainerStyling}`} onClick={() => setIsOpen(prevVal => !prevVal)}>
 				{accordionTitleContainer}
 			</button>

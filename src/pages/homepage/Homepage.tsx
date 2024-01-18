@@ -5,12 +5,14 @@ import QRCodePhoneIMG from "../../assets/qrcode-phone-img.webp";
 import benefit01 from "../../assets/grocery-delivery-benefit-img.webp";
 import benefit02 from "../../assets/grocery-delivery-see-real-time-updates-benefit.webp";
 import benefit03 from "../../assets/grocery-delivery-get-your-items-same-day-benefit-img.webp";
+import handDeliveryImg from "../../assets/man-hands-delivery-img.webp";
 import { AccountSignUpWindow } from "../../components/account-signup-window/AccountSignUpWindow";
 import Header from "../../components/header/Header";
 import GroceryDeliveryCard from "./components/grocery-delivery-card/GroceryDeliveryCard";
+import StatisticFactsAccordion from "./components/statistic-facts-accordion/StatisticFactsAccordion";
 import type { LoginSignUpStatusType } from "../../components/account-signup-window/types/LoginSignUpStatusType";
 import type { GroceryCardType } from "./components/grocery-delivery-card/types/GroceryCardType";
-import { Accordion, AccordionItem } from "../../components/accordion/Accordion";
+
 import "../../components/accordion/style.css";
 
 function Homepage() {
@@ -63,6 +65,13 @@ function Homepage() {
 				</div>
 			</div>
 			{/* ----- STATISTIC FACTS SECTION ------ */}
+			<section className="statistic-facts-section">
+				<h2>The largest online grocery marketplace in North America</h2>
+				<div className="statistic-facts-img-wrapper">
+					<img src={handDeliveryImg} alt="" />
+				</div>
+				<StatisticFactsAccordion />
+			</section>
 		</>
 	);
 }

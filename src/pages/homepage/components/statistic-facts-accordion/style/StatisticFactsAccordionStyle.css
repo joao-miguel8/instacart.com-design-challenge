@@ -1,0 +1,26 @@
+.statistic-facts-accordion-title-container {
+	border-radius: 10px;
+}
+
+.statistic-facts-accordion-title-container h2 {
+	margin: 0;
+	padding: 0;
+	text-align: start;
+	font-size: 28px;
+	color: #343538;
+}
+
+.accordion-card-wrapper {
+	margin: 10px 0;
+	padding: 32px;
+	display: flex;
+	flex-direction: column;
+	background: rgb(244, 244, 244);
+	border-radius: 8px;
+}
+
+.stat-content-container p {
+	margin: 24px 0px 0px;
+	font-size: 18px;
+	color: rgb(52, 53, 56);
+}
