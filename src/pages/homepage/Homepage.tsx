@@ -13,6 +13,7 @@ import GroceryDeliveryCard from "./components/grocery-delivery-card/GroceryDeliv
 import StatisticFactsAccordion from "./components/statistic-facts-accordion/StatisticFactsAccordion";
 import type { LoginSignUpStatusType } from "../../components/account-signup-window/types/LoginSignUpStatusType";
 import type { GroceryCardType } from "./components/grocery-delivery-card/types/GroceryCardType";
+import CommonQuestionsAccordion from "./components/common-questions-accordion/CommonQuestionsAccordion";
 
 function Homepage() {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -70,6 +71,11 @@ function Homepage() {
 					<img src={handDeliveryImg} alt="" />
 				</div>
 				<StatisticFactsAccordion />
+			</section>
+			{/* ----- COMMON QUESTIONS SECTION ------ */}
+			<section className="common-questions-section">
+				<h2>Common questions</h2>
+				<CommonQuestionsAccordion />
 			</section>
 		</>
 	);

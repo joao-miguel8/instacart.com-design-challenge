@@ -155,6 +155,22 @@
 	border-radius: 8px;
 }
 
+/* <<<<<<<< STATISTIC FACTS SECTION >>>>>>>>> */
+.common-questions-section {
+	padding: 32px 32px 60px;
+}
+
+.common-questions-section h2 {
+	margin: auto;
+	padding-bottom: 32px;
+	max-width: 500px;
+	text-align: center;
+	font-weight: 700;
+	font-size: 28px;
+	line-height: 32px;
+	color: #343538;
+}
+
 /* ============================= */
 /* <<<<<<<< MEDIA QUERIES >>>>>>>>> */
 /* ============================= */

@@ -7,8 +7,10 @@ import type { AccordionType } from "./types/AccordionType";
 - You can pass JSX into the AccordionItem and Accordion props
 - You can override styling by using the styling props
 - You cannot override the on and off styling functionality which are these two classNames "accordion-item-opened" "accordion-item-hidden"
+- You can add icons of your choosing to AccordionType prop IconOpened and IconClosed
+*/
 
-EXAMPLE:
+// EXAMPLE USAGE:
 /*
 				<Accordion>
 					<AccordionItem

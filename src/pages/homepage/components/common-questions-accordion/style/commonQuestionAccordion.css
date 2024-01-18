@@ -1,0 +1,43 @@
+.common-question-accordion-wrapper {
+	background: none;
+}
+
+.common-question-card {
+	padding: 24px 0;
+	border-bottom: 0.5px solid rgb(225, 225, 225);
+	background: none;
+}
+
+.common-question-accordion-title-container-style {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	text-align: start;
+}
+
+.common-question-accordion-title-container-style h3 {
+	max-width: 450px;
+	text-align: start;
+	font-size: 24px;
+	font-weight: 600;
+	color: #424242;
+}
+
+.common-question-card-content-container {
+	margin-top: 14px;
+	padding-right: 20%;
+}
+
+.common-question-card-content-container p {
+	margin-bottom: 20px;
+	line-height: 26px;
+	font-size: 16px;
+}
+
+.common-question-card-content-container ul {
+	margin: 14px 0;
+	padding: 0 0 0 40px;
+	line-height: 26px;
+	list-style: disc;
+}
