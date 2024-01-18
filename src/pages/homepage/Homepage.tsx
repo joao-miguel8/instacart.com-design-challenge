@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./homepage.css";
+import "../../components/accordion/style.css";
 import QRCodeIMG from "../../assets/homepage-qrcode-img.png";
 import QRCodePhoneIMG from "../../assets/qrcode-phone-img.webp";
 import benefit01 from "../../assets/grocery-delivery-benefit-img.webp";
@@ -12,8 +13,6 @@ import GroceryDeliveryCard from "./components/grocery-delivery-card/GroceryDeliv
 import StatisticFactsAccordion from "./components/statistic-facts-accordion/StatisticFactsAccordion";
 import type { LoginSignUpStatusType } from "../../components/account-signup-window/types/LoginSignUpStatusType";
 import type { GroceryCardType } from "./components/grocery-delivery-card/types/GroceryCardType";
-
-import "../../components/accordion/style.css";
 
 function Homepage() {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
