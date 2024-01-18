@@ -10,6 +10,8 @@ import Header from "../../components/header/Header";
 import GroceryDeliveryCard from "./components/grocery-delivery-card/GroceryDeliveryCard";
 import type { LoginSignUpStatusType } from "../../components/account-signup-window/types/LoginSignUpStatusType";
 import type { GroceryCardType } from "./components/grocery-delivery-card/types/GroceryCardType";
+import { Accordion, AccordionItem } from "../../components/accordion/Accordion";
+import "../../components/accordion/style.css";
 
 function Homepage() {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -60,6 +62,7 @@ function Homepage() {
 					</div>
 				</div>
 			</div>
+			{/* ----- STATISTIC FACTS SECTION ------ */}
 		</>
 	);
 }
