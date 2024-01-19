@@ -18,9 +18,12 @@ import CommonQuestionsAccordion from "./components/common-questions-accordion/Co
 import GetDeliveriesServicesAccordion from "./components/get-deliveries-services-accordion/GetDeliveriesServicesAccordion";
 import type { LoginSignUpStatusType } from "../../components/account-signup-window/types/LoginSignUpStatusType";
 import type { GroceryCardType } from "./components/grocery-delivery-card/types/GroceryCardType";
+import useMediaQuery from "../../hooks/useMediaQuery";
+import DeliveryServicesList from "./components/get-deliveries-services-accordion/components/DeliveryServicesList";
 
 function Homepage() {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
+	const isDesktop = useMediaQuery("(min-width: 978px)");
 
 	const [loginSignUpStatus, setLoginSignUpStatus] = useState<LoginSignUpStatusType>({
 		isSignUpEnabled: false,
@@ -102,7 +105,7 @@ function Homepage() {
 							</div>
 						</div>
 					</div>
-					<GetDeliveriesServicesAccordion />
+					{isDesktop ? <DeliveryServicesList /> : <GetDeliveriesServicesAccordion />}
 				</div>
 			</section>
 		</>
