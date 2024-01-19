@@ -66,7 +66,7 @@ function GetDeliveriesServicesAccordion() {
 	};
 
 	return (
-		<Accordion accordionWrapperStyling="accordion-wrapper">
+		<Accordion accordionWrapperStyling="accordion-main-wrapper">
 			{/* Top departments */}
 			<AccordionItem
 				iconClosed={<IoChevronDown size={"1rem"} />}
