@@ -1,6 +1,9 @@
 import { useState } from "react";
 import "./homepage.css";
 import "../../components/accordion/style.css";
+import { FaApple } from "react-icons/fa";
+import { BiLogoPlayStore } from "react-icons/bi";
+import instacartLogo from "../../assets/nav-carrot-logo.webp";
 import QRCodeIMG from "../../assets/homepage-qrcode-img.png";
 import QRCodePhoneIMG from "../../assets/qrcode-phone-img.webp";
 import benefit01 from "../../assets/grocery-delivery-benefit-img.webp";
@@ -11,9 +14,10 @@ import { AccountSignUpWindow } from "../../components/account-signup-window/Acco
 import Header from "../../components/header/Header";
 import GroceryDeliveryCard from "./components/grocery-delivery-card/GroceryDeliveryCard";
 import StatisticFactsAccordion from "./components/statistic-facts-accordion/StatisticFactsAccordion";
+import CommonQuestionsAccordion from "./components/common-questions-accordion/CommonQuestionsAccordion";
+import GetDeliveriesServicesAccordion from "./components/get-deliveries-services-accordion/GetDeliveriesServicesAccordion";
 import type { LoginSignUpStatusType } from "../../components/account-signup-window/types/LoginSignUpStatusType";
 import type { GroceryCardType } from "./components/grocery-delivery-card/types/GroceryCardType";
-import CommonQuestionsAccordion from "./components/common-questions-accordion/CommonQuestionsAccordion";
 
 function Homepage() {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -76,6 +80,30 @@ function Homepage() {
 			<section className="common-questions-section">
 				<h2>Common questions</h2>
 				<CommonQuestionsAccordion />
+			</section>
+			{/* ----- GET DELIVERIES SERVICES SECTION ------ */}
+			<section className="get-delivery-services-wrapper">
+				<div className="get-delivery-services-container">
+					<div>
+						{/* Header Container */}
+						<div className="get-delivery-services-header-container">
+							<img src={instacartLogo} alt="instacart logo" />
+							<h4>Get deliveries with instacart</h4>
+						</div>
+						{/* Mobile App Logos */}
+						<div className="app-providers-logo-container">
+							<div>
+								<FaApple size={"1.2rem"} />
+								<a href="https://apps.apple.com/us/app/instacart-get-grocery-delivery/id545599256">IOS</a>
+							</div>
+							<div>
+								<BiLogoPlayStore size={"1.2rem"} />
+								<a href="https://apps.apple.com/us/app/instacart-get-grocery-delivery/id545599256">Android</a>
+							</div>
+						</div>
+					</div>
+					<GetDeliveriesServicesAccordion />
+				</div>
 			</section>
 		</>
 	);

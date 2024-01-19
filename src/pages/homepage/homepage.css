@@ -156,6 +156,7 @@
 }
 
 /* <<<<<<<< STATISTIC FACTS SECTION >>>>>>>>> */
+
 .common-questions-section {
 	padding: 32px 32px 60px;
 }
@@ -169,6 +170,67 @@
 	font-size: 28px;
 	line-height: 32px;
 	color: #343538;
+}
+
+/* <<<<<<<< GET DELIVERIES SERVICES SECTION >>>>>>>>> */
+
+.get-delivery-services-wrapper {
+	margin-bottom: 300px;
+	padding: 0 5%;
+}
+
+.get-delivery-services-container {
+	margin-bottom: 40px;
+	padding: 0 5%;
+	border-top: 0.5px solid rgb(225, 225, 225);
+}
+
+.get-delivery-services-header-container {
+	padding: 20px 0 13px 6px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.get-delivery-services-header-container img {
+	width: 33px;
+}
+
+.get-delivery-services-header-container h4 {
+	margin-left: 10px;
+	font-size: 17px;
+	font-weight: 600;
+	color: rgb(52, 53, 56);
+}
+
+.app-providers-logo-container {
+	margin-top: 12px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+}
+
+.app-providers-logo-container div {
+	display: flex;
+	align-items: center;
+}
+
+.app-providers-logo-container div:nth-child(2) {
+	margin-left: 10px;
+}
+
+.app-providers-logo-container svg {
+	display: block;
+	color: rgb(52, 53, 56);
+}
+
+.app-providers-logo-container a {
+	font-size: 14px;
+	margin-left: 12px;
+	font-weight: 600;
+	text-decoration: none;
+	color: rgb(52, 53, 56);
 }
 
 /* ============================= */
