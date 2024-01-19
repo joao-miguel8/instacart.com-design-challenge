@@ -20,6 +20,7 @@ import type { LoginSignUpStatusType } from "../../components/account-signup-wind
 import type { GroceryCardType } from "./components/grocery-delivery-card/types/GroceryCardType";
 import useMediaQuery from "../../hooks/useMediaQuery";
 import DeliveryServicesList from "./components/get-deliveries-services-accordion/components/DeliveryServicesList";
+import BecomeAShopperServicesAccordion from "./components/become-a-shopper-services-accordion/BecomeAShopperServicesAccordion";
 
 function Homepage() {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -87,7 +88,7 @@ function Homepage() {
 			{/* ----- GET DELIVERIES SERVICES SECTION ------ */}
 			<section className="get-delivery-services-wrapper">
 				<div className="get-delivery-services-container">
-					<div>
+					<div className="get-delivery-services-header-logos-wrapper">
 						{/* Header Container */}
 						<div className="get-delivery-services-header-container">
 							<img src={instacartLogo} alt="instacart logo" />
@@ -108,6 +109,8 @@ function Homepage() {
 					{isDesktop ? <DeliveryServicesList /> : <GetDeliveriesServicesAccordion />}
 				</div>
 			</section>
+			{/* ----- GET DELIVERIES SERVICES SECTION ------ */}
+			<BecomeAShopperServicesAccordion />
 		</>
 	);
 }

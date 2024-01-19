@@ -1,0 +1,70 @@
+.accordion-wrapper {
+	margin-top: 60px;
+	width: 100%;
+	background: none;
+	box-shadow: none;
+}
+
+.accordion-card-wrapper {
+	margin-top: 20px;
+	padding: 0 20px 10px 20px;
+	background: none;
+	border-bottom: 0.5px solid rgb(225, 225, 225);
+	box-shadow: none;
+}
+
+.accordion-title-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.accordion-title-container h3 {
+	font-weight: 600;
+	font-size: 17px;
+	color: #343538;
+}
+
+.accordion-content-wrapper {
+	margin-top: 16px;
+	width: 100%;
+	background: none;
+}
+
+.accordion-list-items li {
+	padding: 7px 0;
+}
+
+.accordion-list-items li a {
+	font-size: 14px;
+	color: #343538;
+	text-decoration: none;
+}
+
+/*  <<<<<<<<<<<< MEDIA QUERIES >>>>>>>>>>>> */
+
+@media (min-width: 700px) {
+	.accordion-wrapper {
+		margin: 0 20px;
+	}
+
+	.get-delivery-services-container {
+		display: flex;
+	}
+
+	.accordion-card-wrapper {
+		margin-top: 0px;
+		width: 100%;
+	}
+}
+
+/*  <<<<<<<<<<<< STYLES AND EFFECTS >>>>>>>>>>>> */
+
+.accordion-list-items li a:hover {
+	border-bottom: 1px solid #343538;
+}
+
+.accordion-list-items li a:visited {
+	/* color: orange; */
+	text-decoration: none;
+}
