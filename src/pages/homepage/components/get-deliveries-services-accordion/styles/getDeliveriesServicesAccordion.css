@@ -1,7 +1,12 @@
+.accordion-wrapper {
+	width: 100%;
+	background: none;
+}
 .accordion-main-wrapper {
 	display: flex;
 	flex-direction: column;
 	width: 100%;
+	box-shadow: none;
 }
 
 .accordion-card-wrapper {
@@ -10,6 +15,7 @@
 	padding: 0 20px 10px 20px;
 	background: none;
 	border-bottom: 0.5px solid rgb(225, 225, 225);
+	box-shadow: none;
 }
 
 .accordion-title-container {
@@ -38,6 +44,23 @@
 	font-size: 14px;
 	color: #343538;
 	text-decoration: none;
+}
+
+/*  <<<<<<<<<<<< MEDIA QUERIES >>>>>>>>>>>> */
+
+@media (min-width: 700px) {
+	.accordion-wrapper {
+		margin: 0 20px;
+	}
+
+	.get-delivery-services-container {
+		display: flex;
+	}
+
+	.accordion-card-wrapper {
+		margin-top: 0px;
+		width: 100%;
+	}
 }
 
 /*  <<<<<<<<<<<< STYLES AND EFFECTS >>>>>>>>>>>> */

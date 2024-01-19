@@ -1,0 +1,31 @@
+.delivery-services-wrapper {
+	display: flex;
+	width: 100%;
+}
+
+.delivery-services-container ul {
+	margin-top: 16px;
+	width: 100%;
+	background: none;
+}
+
+.delivery-services-container ul li {
+	padding: 7px 0;
+}
+
+.delivery-services-container ul li a {
+	font-size: 14px;
+	color: #343538;
+	text-decoration: none;
+}
+
+/*  <<<<<<<<<<<< STYLES AND EFFECTS >>>>>>>>>>>> */
+
+.delivery-services-container ul li a:hover {
+	border-bottom: 1px solid #343538;
+}
+
+.accordion-list-items li a:visited {
+	/* color: orange; */
+	text-decoration: none;
+}
