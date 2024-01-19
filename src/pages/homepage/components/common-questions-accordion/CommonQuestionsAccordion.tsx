@@ -10,8 +10,8 @@ function CommonQuestionsAccordion() {
 			<Accordion accordionWrapperStyling="common-question-accordion-wrapper">
 				{/* Item01 */}
 				<AccordionItem
-					iconOpened={<FaPlus size={"1.5rem"} />}
-					iconClosed={<FaMinus size={"1.5rem"} />}
+					iconOpened={<FaMinus size={"1.5rem"} />}
+					iconClosed={<FaPlus size={"1.5rem"} />}
 					accordionItemWrapper="common-question-card"
 					accordionTitleContainerStyling="common-question-accordion-title-container-style "
 					accordionTitleContainer={
@@ -32,8 +32,8 @@ function CommonQuestionsAccordion() {
 				</AccordionItem>
 				{/* Item02 */}
 				<AccordionItem
-					iconOpened={<FaPlus size={"1.5rem"} />}
-					iconClosed={<FaMinus size={"1.5rem"} />}
+					iconOpened={<FaMinus size={"1.5rem"} />}
+					iconClosed={<FaPlus size={"1.5rem"} />}
 					accordionItemWrapper="common-question-card"
 					accordionTitleContainerStyling="common-question-accordion-title-container-style "
 					accordionTitleContainer={<h3>How much does instacart cost?</h3>}
@@ -48,8 +48,8 @@ function CommonQuestionsAccordion() {
 				</AccordionItem>
 				{/* Item03 */}
 				<AccordionItem
-					iconOpened={<FaPlus size={"1.4rem"} />}
-					iconClosed={<FaMinus size={"1.4rem"} />}
+					iconOpened={<FaMinus size={"1.5rem"} />}
+					iconClosed={<FaPlus size={"1.5rem"} />}
 					accordionItemWrapper="common-question-card"
 					accordionTitleContainerStyling="common-question-accordion-title-container-style "
 					accordionTitleContainer={<h3>Will I pay the same price on instacart as I would in store?</h3>}
@@ -69,8 +69,8 @@ function CommonQuestionsAccordion() {
 				</AccordionItem>
 				{/* Item04 */}
 				<AccordionItem
-					iconOpened={<FaPlus size={"1.4rem"} />}
-					iconClosed={<FaMinus size={"1.4rem"} />}
+					iconOpened={<FaMinus size={"1.5rem"} />}
+					iconClosed={<FaPlus size={"1.5rem"} />}
 					accordionItemWrapper="common-question-card"
 					accordionTitleContainerStyling="common-question-accordion-title-container-style "
 					accordionTitleContainer={<h3>What happens if there's an issue with my order?</h3>}
