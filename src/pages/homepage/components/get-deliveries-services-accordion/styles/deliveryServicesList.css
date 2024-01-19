@@ -1,5 +1,7 @@
 .delivery-services-wrapper {
+	margin: 20px 0 0 20px;
 	display: flex;
+	justify-content: space-between;
 	width: 100%;
 }
 
@@ -9,8 +11,10 @@
 	background: none;
 }
 
-.delivery-services-container ul li {
-	padding: 7px 0;
+.delivery-services-container h3 {
+	font-size: 17px;
+	font-weight: 700;
+	color: #343538;
 }
 
 .delivery-services-container ul li a {
@@ -26,6 +30,5 @@
 }
 
 .accordion-list-items li a:visited {
-	/* color: orange; */
 	text-decoration: none;
 }
