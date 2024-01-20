@@ -7,12 +7,12 @@ function AccordionItem({ iconOpened, iconClosed, children, accordionTitleContain
 	const [isOpen, setIsOpen] = useState(false);
 
 	return (
-		<div className={accordionItemWrapper ?? "accordion-item-wrapper"}>
-			<button className={accordionTitleContainerStyling ?? "accordion-title-container"} onClick={() => setIsOpen(prevVal => !prevVal)}>
+		<div className={accordionItemWrapper}>
+			<div className={`${accordionTitleContainerStyling}`} onClick={() => setIsOpen(prevVal => !prevVal)}>
 				{accordionTitleContainer}
 				<span>{isOpen ? iconOpened : iconClosed}</span>
-			</button>
-			{<div className={`${isOpen ? "accordion-item-opened" : "accordion-item-hidden"} ${accordionContentContainerStyling ?? "accordion-content-container"}`}>{children}</div>}
+			</div>
+			{<div className={`${isOpen ? "accordion-item-opened" : "accordion-item-hidden"} ${accordionContentContainerStyling}`}>{children}</div>}
 		</div>
 	);
 }

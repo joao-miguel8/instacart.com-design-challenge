@@ -9,18 +9,18 @@ import type { DeliveryServiceListGroupType } from "./types/DeliveryServiceListGr
 function GetDeliveriesServicesAccordion() {
 	return (
 		<>
-			<Accordion accordionWrapperStyling="accordion-wrapper">
+			<Accordion accordionWrapperStyling="get-deliveries-services-accordion-wrapper">
 				{deliveryServicesList.map((item: DeliveryServiceListGroupType) => {
 					return (
 						<AccordionItem
 							key={item.title}
 							iconClosed={<IoChevronDown size={"1rem"} />}
 							iconOpened={<IoChevronUp size={"1rem"} />}
-							accordionTitleContainerStyling="accordion-title-container"
-							accordionItemWrapper="accordion-card-wrapper"
-							accordionContentContainerStyling="accordion-content-wrapper"
+							accordionItemWrapper={"get-deliveries-accordion-item-wrapper"}
+							accordionTitleContainerStyling="get-deliveries-services-accordion-title-container"
+							accordionContentContainerStyling="get-deliveries-services-accordion-content-container"
 							accordionTitleContainer={<h3>{item.title}</h3>}>
-							<ul className="accordion-list-items">
+							<ul className="get-deliveries-services-accordion-list-items">
 								{item.links.map(linkItem => {
 									return (
 										<li key={linkItem.title}>

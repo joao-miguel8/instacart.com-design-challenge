@@ -20,7 +20,7 @@ import type { LoginSignUpStatusType } from "../../components/account-signup-wind
 import type { GroceryCardType } from "./components/grocery-delivery-card/types/GroceryCardType";
 import useMediaQuery from "../../hooks/useMediaQuery";
 import DeliveryServicesList from "./components/get-deliveries-services-accordion/components/DeliveryServicesList";
-import BecomeAShopperServicesAccordion from "./components/become-a-shopper-services-accordion/BecomeAShopperServicesAccordion";
+import BecomeAShopperServicesAccordion from "./components/become-a-shopper-services/BecomeAShopperServicesAccordion";
 
 function Homepage() {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);

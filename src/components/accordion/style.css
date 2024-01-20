@@ -1,28 +1,7 @@
-.accordion-wrapper {
-	margin: 20px;
-	max-height: 600px;
-	box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-	border-radius: 8px;
-}
-
-.accordion-item-wrapper {
-	background: rgb(239, 239, 239);
-}
-
-.accordion-title-container {
-	width: 100%;
-	min-height: 60px;
-}
-
-.accordion-content-container {
-	padding: 20px;
-	min-height: 60px;
-	background: rgb(239, 239, 239);
-}
-
 .accordion-item-opened {
 	display: inline-block;
 }
+
 .accordion-item-hidden {
 	display: none;
 }

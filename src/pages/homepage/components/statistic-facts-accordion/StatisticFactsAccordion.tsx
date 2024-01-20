@@ -15,7 +15,7 @@ function StatisticFactsAccordion() {
 			{statisticFactsAccordionData.map(item => {
 				return (
 					<Accordion accordionWrapperStyling="accordion-wrapper-style">
-						<AccordionItem accordionItemWrapper="flex-col accordion-card-wrapper" accordionTitleContainerStyling="statistic-facts-accordion-title-container" accordionTitleContainer={<h2>{item.title}</h2>} accordionContentContainerStyling="stat-content-container">
+						<AccordionItem accordionItemWrapper=" static-facts-accordion-accordion-card-wrapper" accordionTitleContainerStyling="statistic-facts-accordion-title-container" accordionTitleContainer={<h2>{item.title}</h2>} accordionContentContainerStyling="stat-content-container">
 							<p>{item.data}</p>
 						</AccordionItem>
 					</Accordion>

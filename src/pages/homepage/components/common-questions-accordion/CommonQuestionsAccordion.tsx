@@ -69,8 +69,8 @@ function CommonQuestionsAccordion() {
 				</AccordionItem>
 				{/* Item04 */}
 				<AccordionItem
-					iconOpened={<FaMinus size={"1.5rem"} />}
-					iconClosed={<FaPlus size={"1.5rem"} />}
+					iconOpened={<FaPlus size={"1.4rem"} />}
+					iconClosed={<FaMinus size={"1.4rem"} />}
 					accordionItemWrapper="common-question-card"
 					accordionTitleContainerStyling="common-question-accordion-title-container-style "
 					accordionTitleContainer={<h3>What happens if there's an issue with my order?</h3>}

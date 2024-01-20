@@ -1,41 +1,32 @@
-.accordion-wrapper {
+.get-deliveries-services-accordion-wrapper {
 	margin-top: 60px;
-	width: 100%;
-	background: none;
-	box-shadow: none;
+	max-width: 100%;
+	flex: 1;
 }
 
-.accordion-card-wrapper {
-	margin-top: 20px;
-	padding: 0 20px 10px 20px;
-	background: none;
-	border-bottom: 0.5px solid rgb(225, 225, 225);
-	box-shadow: none;
-}
-
-.accordion-title-container {
+.get-deliveries-services-accordion-title-container {
 	display: flex;
-	justify-content: space-between;
 	align-items: center;
+	justify-content: space-between;
+	padding: 24px;
+	border-bottom: 0.5px solid rgb(225, 225, 225);
 }
 
-.accordion-title-container h3 {
+.get-deliveries-accordion-item-wrapper {
+	max-width: 100%;
+}
+
+.get-deliveries-services-accordion-title-container h3 {
 	font-weight: 600;
 	font-size: 17px;
 	color: #343538;
 }
 
-.accordion-content-wrapper {
-	margin-top: 16px;
-	width: 100%;
-	background: none;
-}
-
-.accordion-list-items li {
+.get-deliveries-services-accordion-list-items li {
 	padding: 7px 0;
 }
 
-.accordion-list-items li a {
+.get-deliveries-services-accordion-list-items li a {
 	font-size: 14px;
 	color: #343538;
 	text-decoration: none;
@@ -43,18 +34,20 @@
 
 /*  <<<<<<<<<<<< MEDIA QUERIES >>>>>>>>>>>> */
 
-@media (min-width: 700px) {
-	.accordion-wrapper {
+@media (min-width: 880px) {
+	.get-deliveries-services-accordion-wrapper {
 		margin: 0 20px;
+		/* width: 100%; */
+		max-width: 350px;
 	}
 
 	.get-delivery-services-container {
 		display: flex;
+		align-items: flex-start;
 	}
 
-	.accordion-card-wrapper {
-		margin-top: 0px;
-		width: 100%;
+	.get-deliveries-accordion-item-wrapper {
+		max-width: 350px;
 	}
 }
 
@@ -65,6 +58,5 @@
 }
 
 .accordion-list-items li a:visited {
-	/* color: orange; */
 	text-decoration: none;
 }

@@ -1,4 +1,3 @@
-import "./style/becomeAShopperServicesAccordion.css";
 import { IoChevronUp } from "react-icons/io5";
 import { IoChevronDown } from "react-icons/io5";
 import Accordion from "../../../../components/accordion/Accordion";
@@ -11,14 +10,7 @@ function BecomeAShopperServicesAccordion() {
 			<Accordion accordionWrapperStyling="accordion-wrapper">
 				{becomeAShopperServicesData.map(item => {
 					return (
-						<AccordionItem
-							key={item.title}
-							iconClosed={<IoChevronDown size={"1rem"} />}
-							iconOpened={<IoChevronUp size={"1rem"} />}
-							accordionTitleContainerStyling="accordion-title-container"
-							accordionItemWrapper="accordion-card-wrapper"
-							accordionContentContainerStyling="accordion-content-wrapper"
-							accordionTitleContainer={<h3>{item.title}</h3>}>
+						<AccordionItem key={item.title} iconClosed={<IoChevronDown size={"1rem"} />} iconOpened={<IoChevronUp size={"1rem"} />} accordionTitleContainer={<h3>{item.title}</h3>}>
 							<ul className="accordion-list-items">
 								{item.links.map(linkItem => {
 									return (
