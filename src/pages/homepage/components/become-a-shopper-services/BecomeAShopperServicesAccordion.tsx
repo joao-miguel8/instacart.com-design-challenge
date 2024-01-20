@@ -3,12 +3,12 @@ import { IoChevronDown } from "react-icons/io5";
 import Accordion from "../../../../components/accordion/Accordion";
 import AccordionItem from "../../../../components/accordion/AccordionItem";
 import { becomeAShopperServicesData } from "./becomeAShopperServicesData";
-import "../become-a-shopper-services/style/becomeAShopperServices.css";
+import "../become-a-shopper-services/style/becomeAShopperServicesAccordion.css";
 
 function BecomeAShopperServicesAccordion() {
 	return (
 		<>
-			<Accordion accordionWrapperStyling="become-a-shopper-services-accordion-wrapper-accordion-wrapper">
+			<Accordion accordionWrapperStyling="become-a-shopper-services-accordion-wrapper">
 				{becomeAShopperServicesData.map(item => {
 					return (
 						<AccordionItem

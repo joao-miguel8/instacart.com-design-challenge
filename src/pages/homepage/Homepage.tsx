@@ -3,6 +3,7 @@ import "./homepage.css";
 import "../../components/accordion/style.css";
 import { FaApple } from "react-icons/fa";
 import { BiLogoPlayStore } from "react-icons/bi";
+import becomeAShopperIcon from "../../assets/becomeAShopper-header-icon.svg";
 import instacartLogo from "../../assets/nav-carrot-logo.webp";
 import QRCodeIMG from "../../assets/homepage-qrcode-img.png";
 import QRCodePhoneIMG from "../../assets/qrcode-phone-img.webp";
@@ -95,7 +96,7 @@ function Homepage() {
 							<h4>Get deliveries with instacart</h4>
 						</div>
 						{/* Mobile App Logos */}
-						<div className="app-providers-logo-container">
+						<div className="get-delivery-services-app-providers-logo-container">
 							<div>
 								<FaApple size={"1.2rem"} />
 								<a href="https://apps.apple.com/us/app/instacart-get-grocery-delivery/id545599256">IOS</a>
@@ -109,8 +110,30 @@ function Homepage() {
 					{isDesktop ? <DeliveryServicesList /> : <GetDeliveriesServicesAccordion />}
 				</div>
 			</section>
-			{/* ----- GET DELIVERIES SERVICES SECTION ------ */}
-			<BecomeAShopperServicesAccordion />
+			{/* ----- BECOME A SHOPPER SERVICES SECTION ------ */}
+			<section className="become-a-shopper-services-wrapper">
+				<div className="become-a-shopper-services-container">
+					<div className="become-a-shopper-services-header-logos-wrapper">
+						{/* Header Container */}
+						<div className="become-a-shopper-services-header-container">
+							<img src={becomeAShopperIcon} alt="instacart logo" />
+							<h4>Become a Shopper</h4>
+						</div>
+						{/* Mobile App Logos */}
+						<div className="become-a-shopper-app-providers-logo-container">
+							<div>
+								<FaApple size={"1.2rem"} />
+								<a href="https://apps.apple.com/us/app/instacart-shopper-earn-money/id1454056744">IOS</a>
+							</div>
+							<div>
+								<BiLogoPlayStore size={"1.2rem"} />
+								<a href="https://play.google.com/store/apps/details?id=com.instacart.shopper&pli=1">Android</a>
+							</div>
+						</div>
+					</div>
+					<BecomeAShopperServicesAccordion />
+				</div>
+			</section>
 		</>
 	);
 }

@@ -216,7 +216,7 @@
 	color: rgb(52, 53, 56);
 }
 
-.app-providers-logo-container {
+.get-delivery-services-app-providers-logo-container {
 	margin-top: 12px;
 	display: flex;
 	align-items: center;
@@ -224,21 +224,89 @@
 	gap: 10px;
 }
 
-.app-providers-logo-container div {
+.get-delivery-services-app-providers-logo-container div {
 	display: flex;
 	align-items: center;
 }
 
-.app-providers-logo-container div:nth-child(2) {
+.get-delivery-services-app-providers-logo-container div:nth-child(2) {
 	margin-left: 10px;
 }
 
-.app-providers-logo-container svg {
+.get-delivery-services-app-providers-logo-container svg {
 	display: block;
 	color: rgb(52, 53, 56);
 }
 
-.app-providers-logo-container a {
+.get-delivery-services-app-providers-logo-container a {
+	font-size: 14px;
+	margin-left: 12px;
+	font-weight: 600;
+	text-decoration: none;
+	color: rgb(52, 53, 56);
+}
+
+/* ============================= */
+/* <<<<<<<< GET DELIVERIES SERVICES SECTION >>>>>>>>> */
+/* ============================= */
+
+.become-a-shopper-services-wrapper {
+	padding: 0 5%;
+}
+
+.become-a-shopper-services-container {
+	display: flex;
+	flex: 1;
+	flex-direction: column;
+	padding: 0 5%;
+	border-top: 0.5px solid rgb(225, 225, 225);
+}
+
+.become-a-shopper-services-header-logos-wrapper {
+	flex: 1;
+}
+
+.become-a-shopper-services-header-container {
+	display: flex;
+	padding: 20px 0 13px 6px;
+	align-items: center;
+	justify-content: center;
+}
+
+.become-a-shopper-services-header-container img {
+	width: 33px;
+}
+
+.become-a-shopper-services-header-container h4 {
+	margin-left: 10px;
+	font-size: 17px;
+	font-weight: 600;
+	color: rgb(52, 53, 56);
+}
+
+.become-a-shopper-app-providers-logo-container {
+	margin-top: 12px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+}
+
+.become-a-shopper-app-providers-logo-container div {
+	display: flex;
+	align-items: center;
+}
+
+.become-a-shopper-app-providers-logo-container div:nth-child(2) {
+	margin-left: 10px;
+}
+
+.become-a-shopper-app-providers-logo-container svg {
+	display: block;
+	color: rgb(52, 53, 56);
+}
+
+.become-a-shopper-app-providers-logo-container a {
 	font-size: 14px;
 	margin-left: 12px;
 	font-weight: 600;
@@ -316,8 +384,18 @@
 	}
 
 	.get-delivery-services-container {
-		padding: 0;
+		padding: 0px;
+		display: flex;
 		border-top: 0.5px solid rgb(225, 225, 225);
+	}
+
+	.become-a-shopper-services-container {
+		padding: 0;
+		flex-direction: row;
+	}
+
+	.become-a-shopper-services-wrapper {
+		margin-top: 60px;
 	}
 }
 

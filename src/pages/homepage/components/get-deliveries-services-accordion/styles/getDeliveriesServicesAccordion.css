@@ -34,15 +34,19 @@
 
 /*  <<<<<<<<<<<< MEDIA QUERIES >>>>>>>>>>>> */
 
-@media (min-width: 880px) {
+@media (min-width: 750px) {
 	.get-deliveries-services-accordion-wrapper {
-		margin: 0 20px;
-		/* width: 100%; */
-		max-width: 350px;
+		margin-top: 0px;
+	}
+}
+
+@media (min-width: 880px) {
+	.get-deliveries-accordion-item-wrapper {
+		max-width: 100%;
 	}
 
-	.get-deliveries-accordion-item-wrapper {
-		max-width: 350px;
+	.get-deliveries-services-accordion-title-container {
+		max-width: 100%;
 	}
 }
 
