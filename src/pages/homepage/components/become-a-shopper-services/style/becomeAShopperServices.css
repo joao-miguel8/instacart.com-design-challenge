@@ -1,0 +1,57 @@
+.become-a-shopper-services-accordion-wrapper {
+	margin-top: 60px;
+	max-width: 100%;
+	flex: 1;
+}
+
+.become-a-shopper-services-accordion-title-container {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 24px;
+	border-bottom: 0.5px solid rgb(225, 225, 225);
+}
+
+.become-a-shopper-services-accordion-item-wrapper {
+	max-width: 100%;
+}
+
+.become-a-shopper-services-accordion-title-container h3 {
+	font-weight: 600;
+	font-size: 17px;
+	color: #343538;
+}
+
+.become-a-shopper-services-accordion-list-items li {
+	padding: 7px 0;
+}
+
+.become-a-shopper-services-accordion-list-items li a {
+	font-size: 14px;
+	color: #343538;
+	text-decoration: none;
+}
+
+/*  <<<<<<<<<<<< MEDIA QUERIES >>>>>>>>>>>> */
+
+@media (min-width: 880px) {
+	.become-a-shopper-services-accordion-wrapper {
+		margin: 0 20px;
+		/* width: 100%; */
+		max-width: 350px;
+	}
+
+	.become-a-shopper-services-accordion-item-wrapper {
+		max-width: 350px;
+	}
+}
+
+/*  <<<<<<<<<<<< STYLES AND EFFECTS >>>>>>>>>>>> */
+
+.become-a-shopper-services-accordion-list-items li a:hover {
+	border-bottom: 1px solid #343538;
+}
+
+.become-a-shopper-services-accordion-list-items li a:visited {
+	text-decoration: none;
+}
