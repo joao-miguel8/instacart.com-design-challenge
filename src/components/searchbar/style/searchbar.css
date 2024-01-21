@@ -41,6 +41,84 @@
 	font-weight: 600;
 }
 
+/* ------------- POPULAR SEARCHES CONTAINER -------------- */
+
+.popular-searches-list-wrapper {
+	padding: 10px;
+	height: 180px;
+	overflow: auto;
+	scroll-behavior: smooth;
+	z-index: 100;
+	position: absolute;
+	bottom: -210px;
+	left: 0;
+	background: white;
+	border-radius: 8px;
+}
+
+.search-list-container {
+	padding: 10px;
+	height: 180px;
+	overflow: auto;
+	scroll-behavior: smooth;
+	position: absolute;
+	z-index: 100;
+	bottom: -210px;
+	left: 0;
+	background: white;
+	border-radius: 8px;
+}
+
+.popular-searches-list-container h4 {
+	margin-top: 20px;
+	font-size: 20px;
+	font-weight: 600;
+}
+
+.popular-searches-list-container ul {
+	margin-top: 20px;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 2px;
+}
+
+.popular-search-list-item {
+	margin: 4px;
+	padding: 2px;
+	max-width: 140px;
+	width: 50%;
+	display: flex;
+	align-items: center;
+	background: rgb(243, 243, 243);
+	border-radius: 10px;
+}
+
+.popular-search-list-item a {
+	padding: 4px;
+	width: 100%;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+}
+
+.popular-search-list-item a img {
+	display: inline-block;
+	margin-right: 10px;
+	max-width: 80px;
+	width: 40px;
+	height: 40px;
+}
+
+.popular-search-list-item span {
+	padding: 2px;
+	font-size: 12px;
+	display: inline;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	border-radius: 4px;
+}
+
 /* =========================== */
 /* ----------- MEDIA QUERY ---------- */
 /* =========================== */
