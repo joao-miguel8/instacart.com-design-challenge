@@ -1,0 +1,52 @@
+.search-bar-container {
+	margin: 0 20px;
+	padding: 0 0 0 8px;
+	height: 100%;
+	position: relative;
+	display: none;
+	align-items: center;
+	flex: 1;
+	border-radius: 8px;
+	outline: 2px solid #ffffff;
+	background: #f6f7f8;
+	box-shadow: 0 2px 4px 0 #0000000d inset;
+}
+
+.search-bar-container input {
+	font-size: 15px;
+	padding: 14px 4px;
+	width: 100%;
+	border: none;
+	border-radius: 8px;
+	background: transparent;
+	outline: none;
+}
+
+.clear-search-btn {
+	right: 10px;
+	top: 10px;
+	position: absolute;
+}
+
+/* =========================== */
+/* ----------- ANIMATIONS AND EFFECTS ---------- */
+/* =========================== */
+
+.search-bar-container:focus-within {
+	outline: 2px solid black;
+}
+
+.search-bar-container input::placeholder {
+	color: #343538;
+	font-weight: 600;
+}
+
+/* =========================== */
+/* ----------- MEDIA QUERY ---------- */
+/* =========================== */
+
+@media (min-width: 750px) {
+	.search-bar-container {
+		display: flex;
+	}
+}
