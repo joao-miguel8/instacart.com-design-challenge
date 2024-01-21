@@ -160,6 +160,7 @@
 
 .statistic-facts-img-wrapper img {
 	width: 100%;
+	height: 100%;
 	border-radius: 8px;
 }
 /* ============================= */
@@ -384,6 +385,10 @@
 		display: inline;
 	}
 
+	.statistic-facts-img-wrapper {
+		display: none;
+	}
+
 	.get-delivery-services-container {
 		padding: 0px;
 		display: flex;
@@ -423,5 +428,9 @@
 	.become-as-shopper-services-header-logos-container {
 		max-width: 280px;
 		width: 220px;
+	}
+
+	.become-a-shopper-services-header-container {
+		padding: 0px;
 	}
 }

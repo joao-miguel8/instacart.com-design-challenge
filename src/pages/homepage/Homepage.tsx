@@ -78,7 +78,7 @@ function Homepage() {
 			<section className="statistic-facts-section">
 				<h2>The largest online grocery marketplace in North America</h2>
 				<div className="statistic-facts-img-wrapper">
-					<img src={handDeliveryImg} alt="" />
+					<img src={handDeliveryImg} alt="customer recieving delivery with instacart" />
 				</div>
 				<StatisticFactsAccordion />
 			</section>
