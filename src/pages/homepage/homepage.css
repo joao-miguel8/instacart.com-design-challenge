@@ -419,6 +419,11 @@
 /* ======================== */
 
 @media (min-width: 978px) {
+	.grocery-delivery-benefits-wrapper {
+		display: flex;
+		justify-content: center;
+	}
+
 	.get-delivery-services-header-and-logo-container {
 		max-width: 280px;
 		width: 220px;
