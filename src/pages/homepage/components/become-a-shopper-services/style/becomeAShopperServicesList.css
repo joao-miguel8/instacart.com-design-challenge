@@ -1,0 +1,55 @@
+.become-a-shopper-wrapper {
+	padding-bottom: 38px;
+	width: 800px;
+	display: flex;
+	gap: 14px;
+	justify-content: space-between;
+}
+
+.become-a-shopper-container {
+	max-width: 180px;
+	flex: 1;
+}
+
+.become-a-shopper-container h3 {
+	padding: 20px 0 13px;
+	font-size: 17px;
+	font-weight: 700;
+	color: #343538;
+}
+
+.become-a-shopper-list {
+	margin-top: 16px;
+	width: 100%;
+	background: none;
+}
+
+.become-a-shopper-list li {
+	margin-top: 16px;
+}
+
+.become-a-shopper-list li a {
+	font-size: 14px;
+	color: #343538;
+	text-decoration: none;
+}
+
+/*  <<<<<<<<<<<< STYLES AND EFFECTS >>>>>>>>>>>> */
+
+.become-a-shopper-list li a:hover {
+	border-bottom: 1px solid #343538;
+}
+
+.become-a-shopper-list li a:visited {
+	text-decoration: none;
+}
+
+@media (min-width: 978px) {
+	.delivery-services-wrapper {
+		padding-bottom: 38px;
+	}
+
+	.get-delivery-services-header-logos-wrapper {
+		flex: 1;
+	}
+}

@@ -201,6 +201,7 @@
 .get-delivery-services-header-container {
 	display: flex;
 	padding: 20px 0 13px 6px;
+
 	align-items: center;
 	justify-content: center;
 }
@@ -386,6 +387,7 @@
 	.get-delivery-services-container {
 		padding: 0px;
 		display: flex;
+		justify-content: space-between;
 		border-top: 0.5px solid rgb(225, 225, 225);
 	}
 
@@ -405,5 +407,21 @@
 @media (min-width: 900px) {
 	.bg-hero-img {
 		background-size: 250px;
+	}
+}
+
+/* ======================== */
+/* --------- MEDIA QUERY ---------- */
+/* ======================== */
+
+@media (min-width: 978px) {
+	.get-delivery-services-header-and-logo-container {
+		max-width: 280px;
+		width: 220px;
+	}
+
+	.become-as-shopper-services-header-logos-container {
+		max-width: 280px;
+		width: 220px;
 	}
 }

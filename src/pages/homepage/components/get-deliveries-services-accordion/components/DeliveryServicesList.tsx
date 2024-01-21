@@ -9,15 +9,15 @@ function DeliveryServicesList() {
 				return (
 					<div className="delivery-services-container">
 						<h3>{list.title}</h3>
-						{list.links.map(item => {
-							return (
-								<ul className="delivery-services-list-items">
+						<ul className="delivery-services-list">
+							{list.links.map(item => {
+								return (
 									<li key={item.title}>
 										<a href={item.url}>{item.title}</a>
 									</li>
-								</ul>
-							);
-						})}
+								);
+							})}
+						</ul>
 					</div>
 				);
 			})}
