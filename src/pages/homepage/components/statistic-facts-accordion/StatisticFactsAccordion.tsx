@@ -1,6 +1,7 @@
 import Accordion from "../../../../components/accordion/Accordion";
 import AccordionItem from "../../../../components/accordion/AccordionItem";
-import "../statistic-facts-accordion/style/StatisticFactsAccordionStyle.css";
+import useMediaQuery from "../../../../hooks/useMediaQuery";
+import "./style/StatisticFactsAccordionStyle.css";
 
 function StatisticFactsAccordion() {
 	const statisticFactsAccordionData = [
@@ -9,22 +10,24 @@ function StatisticFactsAccordion() {
 		{ title: "14,000 cities", data: "served across the U.S. & Canada" },
 		{ title: "Millions of orders", data: "delivered or picked up yearly" },
 	];
+	const isDesktopView = useMediaQuery("(min-width: 1100px");
 
 	return (
 		<>
-			{statisticFactsAccordionData.map(item => {
-				return (
-					<Accordion accordionWrapperStyling="statistic-facts-accordion-wrapper-style">
+			<Accordion accordionWrapperStyling="statistic-facts-accordion-wrapper-style">
+				{statisticFactsAccordionData.map(item => {
+					return (
 						<AccordionItem
-							accordionItemWrapper=" statistic-facts-accordion-accordion-card-wrapper"
+							initiallyOpened={isDesktopView && true}
+							accordionItemWrapper="statistic-facts-accordion-accordion-card-wrapper"
 							accordionTitleContainerStyling="statistic-facts-accordion-title-container"
 							accordionTitleContainer={<h2 key={item.title}>{item.title}</h2>}
 							accordionContentContainerStyling="statistic-facts-content-container">
 							<p>{item.data}</p>
 						</AccordionItem>
-					</Accordion>
-				);
-			})}
+					);
+				})}
+			</Accordion>
 		</>
 	);
 }

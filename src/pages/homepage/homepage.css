@@ -164,7 +164,7 @@
 	border-radius: 8px;
 }
 /* ============================= */
-/* <<<<<<<< STATISTIC FACTS SECTION >>>>>>>>> */
+/* <<<<<<<< COMMON QUESTIONS SECTION >>>>>>>>> */
 /* ============================= */
 
 .common-questions-section {
@@ -202,7 +202,6 @@
 .get-delivery-services-header-container {
 	display: flex;
 	padding: 20px 0 13px 6px;
-
 	align-items: center;
 	justify-content: center;
 }

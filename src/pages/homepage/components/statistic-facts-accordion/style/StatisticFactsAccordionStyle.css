@@ -1,6 +1,5 @@
-.statistic-facts-accordion-wrapper {
+.statistic-facts-accordion-wrapper-style {
 	border-radius: 10px;
-	background: rgb(244, 244, 244);
 }
 
 .statistic-facts-accordion-title-container h2 {
@@ -41,5 +40,13 @@
 
 	.statistic-facts-content-container p {
 		text-align: start;
+	}
+}
+
+@media (min-width: 1200px) {
+	.statistic-facts-accordion-wrapper-style {
+		display: flex;
+		justify-content: space-between;
+		gap: 10px;
 	}
 }

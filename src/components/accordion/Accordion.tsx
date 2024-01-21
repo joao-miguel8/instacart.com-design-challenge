@@ -39,7 +39,7 @@ import type { AccordionType } from "./types/AccordionType";
 */
 
 function Accordion({ children, accordionWrapperStyling }: AccordionType) {
-	return <div className={`${accordionWrapperStyling ?? "accordion-wrapper"}`}>{children}</div>;
+	return <div className={`${accordionWrapperStyling}`}>{children}</div>;
 }
 
 export default Accordion;
