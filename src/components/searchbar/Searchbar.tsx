@@ -2,22 +2,46 @@ import { useRef, useState } from "react";
 import "./style/searchbar.css";
 import { BiSearch } from "react-icons/bi";
 import { IoMdClose } from "react-icons/io";
+import milkThumbNailImg from "../../assets/milk-thumbnail-img.jpg";
+import cheeseThumbNailImg from "../../assets/cheese-thumbnail-img.jpg";
+import orangeThumbNailImg from "../../assets/orange-thumbnail-img.jpg";
 import eggThumbNailImg from "../../assets/eggs-thumbnail-img.jpeg";
+import kiwiThumbNailImg from "../../assets/kiwi-tumbnail-img.jpg";
+import watermelonThumbNailImg from "../../assets/watermelon-thumbnail-img.jpg";
 
 const popularSearchesData = [
-	{ itemName: "egg", img: eggThumbNailImg },
-	{ itemName: "egg", img: eggThumbNailImg },
-	{ itemName: "egg eggs and eggs", img: eggThumbNailImg },
-	{ itemName: "egg", img: eggThumbNailImg },
-	{ itemName: "egg", img: eggThumbNailImg },
-	{ itemName: "egg", img: eggThumbNailImg },
-	{ itemName: "egg", img: eggThumbNailImg },
+	{ itemName: "fresh kiwi", img: kiwiThumbNailImg },
+	{ itemName: "eggs", img: eggThumbNailImg },
+	{ itemName: "oranges", img: orangeThumbNailImg },
+	{ itemName: "watermelons", img: watermelonThumbNailImg },
+	{ itemName: "milk", img: milkThumbNailImg },
+	{ itemName: "cheese", img: cheeseThumbNailImg },
+];
+
+const searchQueries = [
+	{
+		category: "dairy",
+		queries: [
+			{ query: "cheese", url: cheeseThumbNailImg },
+			{ query: "eggs", url: eggThumbNailImg },
+			{ query: "milk", url: milkThumbNailImg },
+		],
+	},
+	{
+		category: "fruits",
+		queries: [
+			{ query: "oranges", url: orangeThumbNailImg },
+			{ query: "kiwi", url: kiwiThumbNailImg },
+			{ query: "watermelon", url: watermelonThumbNailImg },
+		],
+	},
 ];
 
 function Searchbar() {
 	const [searchQuery, setSearchQuery] = useState("");
 	const [isSearchFocused, setIsSearchFocused] = useState(false);
 	const inputRef = useRef<HTMLInputElement | null>(null);
+	const [filteredSearchList, setFilteredSearchList] = useState(searchQueries);
 
 	const handleSearchReset = () => {
 		setSearchQuery("");
@@ -25,6 +49,12 @@ function Searchbar() {
 			inputRef.current.focus();
 		}
 	};
+
+	const queryList = filteredSearchList
+		.flatMap(item => {
+			return item.queries;
+		})
+		.sort();
 
 	return (
 		<>
@@ -37,7 +67,7 @@ function Searchbar() {
 					</button>
 				)}
 				{/* ------ SEARCH LIST CONTAINER ---------- */}
-				{isSearchFocused && !searchQuery ? (
+				{isSearchFocused && !searchQuery && (
 					<div className="popular-searches-list-wrapper">
 						<h4>Popular Searches</h4>
 						<div className="popular-searches-list-container">
@@ -55,8 +85,25 @@ function Searchbar() {
 							</ul>
 						</div>
 					</div>
-				) : (
-					<div className="search-list-container"></div>
+				)}
+				{isSearchFocused && searchQuery && (
+					<div className="search-list-container">
+						<ul>
+							{queryList
+								.filter(item => item.query.toLowerCase().includes(searchQuery.toLowerCase()))
+								.map(filteredQuery => {
+									console.log(filteredQuery);
+									return (
+										<li className="search-list-item" key={filteredQuery.query}>
+											<a href="#">
+												<img src={filteredQuery.url} alt="" />
+												<span>{filteredQuery.query}</span>
+											</a>
+										</li>
+									);
+								})}
+						</ul>
+					</div>
 				)}
 			</div>
 		</>
