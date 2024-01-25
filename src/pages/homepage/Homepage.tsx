@@ -3,7 +3,7 @@ import "./homepage.css";
 import "../../components/accordion/style.css";
 import { FaApple } from "react-icons/fa";
 import { BiLogoPlayStore } from "react-icons/bi";
-import becomeAShopperIcon from "../../assets/becomeAShopper-header-icon.svg";
+
 import instacartLogo from "../../assets/nav-carrot-logo.webp";
 import QRCodeIMG from "../../assets/homepage-qrcode-img.png";
 import QRCodePhoneIMG from "../../assets/qrcode-phone-img.webp";
@@ -21,9 +21,9 @@ import type { LoginSignUpStatusType } from "../../components/account-signup-wind
 import type { GroceryCardType } from "./components/grocery-delivery-card/types/GroceryCardType";
 import useMediaQuery from "../../hooks/useMediaQuery";
 import DeliveryServicesList from "./components/get-deliveries-services-accordion/components/DeliveryServicesList";
-import BecomeAShopperServicesAccordion from "./components/become-a-shopper-services/BecomeAShopperServicesAccordion";
-import BecomeAShopperServicesList from "./components/become-a-shopper-services/BecomeAShopperServicesList";
+
 import Footer from "../../components/footer/Footer";
+import BecomeAShopperServices from "../../components/footer/components/BecomeAShopperServices";
 
 function Homepage() {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -117,31 +117,7 @@ function Homepage() {
 						</div>
 					</section>
 					{/* ----- BECOME A SHOPPER SERVICES SECTION ------ */}
-					<section className="become-a-shopper-services-wrapper">
-						<div className="become-a-shopper-services-container">
-							<div className="become-a-shopper-services-header-logos-wrapper">
-								<div className="become-as-shopper-services-header-logos-container">
-									{/* Header Container */}
-									<div className="become-a-shopper-services-header-container">
-										<img src={becomeAShopperIcon} alt="instacart logo" />
-										<h4>Become a Shopper</h4>
-									</div>
-									{/* Mobile App Logos */}
-									<div className="become-a-shopper-app-providers-logo-container">
-										<div>
-											<FaApple size={"1.2rem"} />
-											<a href="https://apps.apple.com/us/app/instacart-shopper-earn-money/id1454056744">IOS</a>
-										</div>
-										<div>
-											<BiLogoPlayStore size={"1.2rem"} />
-											<a href="https://play.google.com/store/apps/details?id=com.instacart.shopper&pli=1">Android</a>
-										</div>
-									</div>
-								</div>
-							</div>
-							{isDesktop ? <BecomeAShopperServicesList /> : <BecomeAShopperServicesAccordion />}
-						</div>
-					</section>
+					<BecomeAShopperServices isDesktop={isDesktop} />
 				</div>
 			</Footer>
 		</>
