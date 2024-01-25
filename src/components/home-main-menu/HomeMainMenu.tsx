@@ -103,12 +103,18 @@ function HomeMainMenu({ handleCloseNavMenu, isMenuOpen, loginSignUpStatus, setLo
 
 	const [isMenuItemsListOpen, setIsMenuItemsListOpen] = useState(false);
 	const [isCloseCountryChoicePopupOpen, setIsCloseCountryChoicePopupOpen] = useState(false);
-	const [chosenMenuNavItem, setChosenMenuNavItem] = useState<NavListType | null>(null);
+	const [currentMenuNavItem, setCurrentMenuNavItem] = useState<NavListType | null>(null);
 	const [countrySelected, setCountrySelected] = useState(countrySelection[0]);
 
 	const handleSignUpWindowEnabled = () => {
 		setLoginSignUpStatus({ ...loginSignUpStatus, isSignUpEnabled: true });
 		handleCloseNavMenu?.();
+	};
+
+	const handleSelectedMenuItem = (chosenItem: NavListType) => {
+		const isItemSameAsPrevious = currentMenuNavItem?.label !== chosenItem.label;
+		setIsMenuItemsListOpen(() => !isMenuItemsListOpen || isItemSameAsPrevious);
+		setCurrentMenuNavItem(chosenItem);
 	};
 
 	return (
@@ -139,10 +145,9 @@ function HomeMainMenu({ handleCloseNavMenu, isMenuOpen, loginSignUpStatus, setLo
 							<div key={item.label}>
 								<button
 									onClick={() => {
-										setChosenMenuNavItem(item);
-										setIsMenuItemsListOpen(true);
+										handleSelectedMenuItem(item);
 									}}
-									className={`${chosenMenuNavItem?.label === item.label && `selected-menu-list-label`}`}>
+									className={`${currentMenuNavItem?.label === item.label && `selected-menu-list-label`}`}>
 									<span>{item.label}</span>
 									<IoChevronForward size={".7rem"} color={"#C7C8CD"} />
 								</button>
@@ -150,7 +155,7 @@ function HomeMainMenu({ handleCloseNavMenu, isMenuOpen, loginSignUpStatus, setLo
 						);
 					})}
 				</div>
-				<SelectedMenuItemList menuItems={chosenMenuNavItem} isMenuItemsListOpen={isMenuItemsListOpen} setIsMenuItemsListOpen={setIsMenuItemsListOpen} />
+				<SelectedMenuItemList menuItems={currentMenuNavItem} isMenuItemsListOpen={isMenuItemsListOpen} setIsMenuItemsListOpen={setIsMenuItemsListOpen} />
 				{/* country select */}
 				<button key={countrySelected.name} onClick={() => setIsCloseCountryChoicePopupOpen(true)} className="menu-open-change-country-btn">
 					<div className="nav-country">
