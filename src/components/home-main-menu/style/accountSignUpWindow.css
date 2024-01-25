@@ -170,7 +170,6 @@ input:focus + label {
 	margin-bottom: 0;
 	margin-top: auto;
 	position: relative;
-	/* height: 500px; */
 	padding-top: 10px;
 	display: flex;
 	flex-direction: column;
@@ -317,13 +316,14 @@ input:focus + label {
 	.sign-in-container-shown {
 		margin: 0 auto;
 		width: 416px;
-		top: -24px;
+		top: 130px;
+		left: 50%;
+		transform: translate(-45%, -15%);
 	}
 
 	.sign-in-container {
 		margin-bottom: 60px;
 		height: 600px;
-		position: relative;
 	}
 
 	.sign-in-container-hidden {
