@@ -183,139 +183,6 @@
 }
 
 /* ============================= */
-/* <<<<<<<< GET DELIVERIES SERVICES SECTION >>>>>>>>> */
-/* ============================= */
-
-.get-delivery-services-wrapper {
-	padding: 0 5%;
-}
-
-.get-delivery-services-container {
-	padding: 0 5%;
-	border-top: 0.5px solid rgb(225, 225, 225);
-}
-
-.get-delivery-services-header-logos-wrapper {
-	flex: 1;
-}
-
-.get-delivery-services-header-container {
-	display: flex;
-	padding: 20px 0 13px 6px;
-	align-items: center;
-	justify-content: center;
-}
-
-.get-delivery-services-header-container img {
-	width: 33px;
-}
-
-.get-delivery-services-header-container h4 {
-	margin-left: 10px;
-	font-size: 17px;
-	font-weight: 600;
-	color: rgb(52, 53, 56);
-}
-
-.get-delivery-services-app-providers-logo-container {
-	margin-top: 12px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	gap: 10px;
-}
-
-.get-delivery-services-app-providers-logo-container div {
-	display: flex;
-	align-items: center;
-}
-
-.get-delivery-services-app-providers-logo-container div:nth-child(2) {
-	margin-left: 10px;
-}
-
-.get-delivery-services-app-providers-logo-container svg {
-	display: block;
-	color: rgb(52, 53, 56);
-}
-
-.get-delivery-services-app-providers-logo-container a {
-	font-size: 14px;
-	margin-left: 12px;
-	font-weight: 600;
-	text-decoration: none;
-	color: rgb(52, 53, 56);
-}
-
-/* ============================= */
-/* <<<<<<<< GET DELIVERIES SERVICES SECTION >>>>>>>>> */
-/* ============================= */
-
-.become-a-shopper-services-wrapper {
-	padding: 0 5%;
-}
-
-.become-a-shopper-services-container {
-	display: flex;
-	flex: 1;
-	flex-direction: column;
-	padding: 0 5%;
-	border-top: 0.5px solid rgb(225, 225, 225);
-}
-
-.become-a-shopper-services-header-logos-wrapper {
-	flex: 1;
-}
-
-.become-a-shopper-services-header-container {
-	display: flex;
-	padding: 20px 0 13px 6px;
-	align-items: center;
-	justify-content: center;
-}
-
-.become-a-shopper-services-header-container img {
-	width: 33px;
-}
-
-.become-a-shopper-services-header-container h4 {
-	margin-left: 10px;
-	font-size: 17px;
-	font-weight: 600;
-	color: rgb(52, 53, 56);
-}
-
-.become-a-shopper-app-providers-logo-container {
-	margin-top: 12px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	gap: 10px;
-}
-
-.become-a-shopper-app-providers-logo-container div {
-	display: flex;
-	align-items: center;
-}
-
-.become-a-shopper-app-providers-logo-container div:nth-child(2) {
-	margin-left: 10px;
-}
-
-.become-a-shopper-app-providers-logo-container svg {
-	display: block;
-	color: rgb(52, 53, 56);
-}
-
-.become-a-shopper-app-providers-logo-container a {
-	font-size: 14px;
-	margin-left: 12px;
-	font-weight: 600;
-	text-decoration: none;
-	color: rgb(52, 53, 56);
-}
-
-/* ============================= */
 /* <<<<<<<< MEDIA QUERIES >>>>>>>>> */
 /* ============================= */
 
@@ -387,22 +254,6 @@
 	.statistic-facts-img-wrapper {
 		display: none;
 	}
-
-	.get-delivery-services-container {
-		padding: 0px;
-		display: flex;
-		justify-content: space-between;
-		border-top: 0.5px solid rgb(225, 225, 225);
-	}
-
-	.become-a-shopper-services-container {
-		padding: 0;
-		flex-direction: row;
-	}
-
-	.become-a-shopper-services-wrapper {
-		margin-top: 60px;
-	}
 }
 
 /* ======================== */
@@ -411,30 +262,5 @@
 @media (min-width: 900px) {
 	.bg-hero-img {
 		background-size: 250px;
-	}
-}
-
-/* ======================== */
-/* --------- MEDIA QUERY ---------- */
-/* ======================== */
-
-@media (min-width: 978px) {
-	.grocery-delivery-benefits-wrapper {
-		display: flex;
-		justify-content: center;
-	}
-
-	.get-delivery-services-header-and-logo-container {
-		max-width: 280px;
-		width: 220px;
-	}
-
-	.become-as-shopper-services-header-logos-container {
-		max-width: 280px;
-		width: 220px;
-	}
-
-	.become-a-shopper-services-header-container {
-		padding: 0px;
 	}
 }

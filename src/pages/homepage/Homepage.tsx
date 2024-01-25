@@ -23,6 +23,7 @@ import useMediaQuery from "../../hooks/useMediaQuery";
 import DeliveryServicesList from "./components/get-deliveries-services-accordion/components/DeliveryServicesList";
 import BecomeAShopperServicesAccordion from "./components/become-a-shopper-services/BecomeAShopperServicesAccordion";
 import BecomeAShopperServicesList from "./components/become-a-shopper-services/BecomeAShopperServicesList";
+import Footer from "../../components/footer/Footer";
 
 function Homepage() {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -88,60 +89,61 @@ function Homepage() {
 				<CommonQuestionsAccordion />
 			</section>
 			{/* ----- GET DELIVERIES SERVICES SECTION ------ */}
-
-			<section className="footer">
-				<section className="get-delivery-services-wrapper">
-					<div className="get-delivery-services-container">
-						<div className="get-delivery-services-header-logos-wrapper">
-							<div className="get-delivery-services-header-and-logo-container">
-								{/* Header Container */}
-								<div className="get-delivery-services-header-container">
-									<img src={instacartLogo} alt="instacart logo" />
-									<h4>Get deliveries with instacart</h4>
-								</div>
-								{/* Mobile App Logos */}
-								<div className="get-delivery-services-app-providers-logo-container">
-									<div>
-										<FaApple size={"1.2rem"} />
-										<a href="https://apps.apple.com/us/app/instacart-get-grocery-delivery/id545599256">IOS</a>
+			<Footer>
+				<div>
+					<section className="get-delivery-services-wrapper">
+						<div className="get-delivery-services-container">
+							<div className="get-delivery-services-header-logos-wrapper">
+								<div className="get-delivery-services-header-and-logo-container">
+									{/* Header Container */}
+									<div className="get-delivery-services-header-container">
+										<img src={instacartLogo} alt="instacart logo" />
+										<h4>Get deliveries with instacart</h4>
 									</div>
-									<div>
-										<BiLogoPlayStore size={"1.2rem"} />
-										<a href="https://apps.apple.com/us/app/instacart-get-grocery-delivery/id545599256">Android</a>
-									</div>
-								</div>
-							</div>
-						</div>
-						{isDesktop ? <DeliveryServicesList /> : <GetDeliveriesServicesAccordion />}
-					</div>
-				</section>
-				{/* ----- BECOME A SHOPPER SERVICES SECTION ------ */}
-				<section className="become-a-shopper-services-wrapper">
-					<div className="become-a-shopper-services-container">
-						<div className="become-a-shopper-services-header-logos-wrapper">
-							<div className="become-as-shopper-services-header-logos-container">
-								{/* Header Container */}
-								<div className="become-a-shopper-services-header-container">
-									<img src={becomeAShopperIcon} alt="instacart logo" />
-									<h4>Become a Shopper</h4>
-								</div>
-								{/* Mobile App Logos */}
-								<div className="become-a-shopper-app-providers-logo-container">
-									<div>
-										<FaApple size={"1.2rem"} />
-										<a href="https://apps.apple.com/us/app/instacart-shopper-earn-money/id1454056744">IOS</a>
-									</div>
-									<div>
-										<BiLogoPlayStore size={"1.2rem"} />
-										<a href="https://play.google.com/store/apps/details?id=com.instacart.shopper&pli=1">Android</a>
+									{/* Mobile App Logos */}
+									<div className="get-delivery-services-app-providers-logo-container">
+										<div>
+											<FaApple size={"1.2rem"} />
+											<a href="https://apps.apple.com/us/app/instacart-get-grocery-delivery/id545599256">IOS</a>
+										</div>
+										<div>
+											<BiLogoPlayStore size={"1.2rem"} />
+											<a href="https://apps.apple.com/us/app/instacart-get-grocery-delivery/id545599256">Android</a>
+										</div>
 									</div>
 								</div>
 							</div>
+							{isDesktop ? <DeliveryServicesList /> : <GetDeliveriesServicesAccordion />}
 						</div>
-						{isDesktop ? <BecomeAShopperServicesList /> : <BecomeAShopperServicesAccordion />}
-					</div>
-				</section>
-			</section>
+					</section>
+					{/* ----- BECOME A SHOPPER SERVICES SECTION ------ */}
+					<section className="become-a-shopper-services-wrapper">
+						<div className="become-a-shopper-services-container">
+							<div className="become-a-shopper-services-header-logos-wrapper">
+								<div className="become-as-shopper-services-header-logos-container">
+									{/* Header Container */}
+									<div className="become-a-shopper-services-header-container">
+										<img src={becomeAShopperIcon} alt="instacart logo" />
+										<h4>Become a Shopper</h4>
+									</div>
+									{/* Mobile App Logos */}
+									<div className="become-a-shopper-app-providers-logo-container">
+										<div>
+											<FaApple size={"1.2rem"} />
+											<a href="https://apps.apple.com/us/app/instacart-shopper-earn-money/id1454056744">IOS</a>
+										</div>
+										<div>
+											<BiLogoPlayStore size={"1.2rem"} />
+											<a href="https://play.google.com/store/apps/details?id=com.instacart.shopper&pli=1">Android</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							{isDesktop ? <BecomeAShopperServicesList /> : <BecomeAShopperServicesAccordion />}
+						</div>
+					</section>
+				</div>
+			</Footer>
 		</>
 	);
 }
