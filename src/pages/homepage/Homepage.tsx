@@ -24,6 +24,7 @@ import DeliveryServicesList from "./components/get-deliveries-services-accordion
 
 import Footer from "../../components/footer/Footer";
 import BecomeAShopperServices from "../../components/footer/components/BecomeAShopperServices";
+import GetDeliveryServices from "../../components/footer/components/GetDeliveryServices";
 
 function Homepage() {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -88,37 +89,11 @@ function Homepage() {
 				<h2>Common questions</h2>
 				<CommonQuestionsAccordion />
 			</section>
-			{/* ----- GET DELIVERIES SERVICES SECTION ------ */}
 			<Footer>
-				<div>
-					<section className="get-delivery-services-wrapper">
-						<div className="get-delivery-services-container">
-							<div className="get-delivery-services-header-logos-wrapper">
-								<div className="get-delivery-services-header-and-logo-container">
-									{/* Header Container */}
-									<div className="get-delivery-services-header-container">
-										<img src={instacartLogo} alt="instacart logo" />
-										<h4>Get deliveries with instacart</h4>
-									</div>
-									{/* Mobile App Logos */}
-									<div className="get-delivery-services-app-providers-logo-container">
-										<div>
-											<FaApple size={"1.2rem"} />
-											<a href="https://apps.apple.com/us/app/instacart-get-grocery-delivery/id545599256">IOS</a>
-										</div>
-										<div>
-											<BiLogoPlayStore size={"1.2rem"} />
-											<a href="https://apps.apple.com/us/app/instacart-get-grocery-delivery/id545599256">Android</a>
-										</div>
-									</div>
-								</div>
-							</div>
-							{isDesktop ? <DeliveryServicesList /> : <GetDeliveriesServicesAccordion />}
-						</div>
-					</section>
-					{/* ----- BECOME A SHOPPER SERVICES SECTION ------ */}
-					<BecomeAShopperServices isDesktop={isDesktop} />
-				</div>
+				{/* ----- GET DELIVERIES SERVICES SECTION ------ */}
+				<GetDeliveryServices isDesktop={isDesktop} />
+				{/* ----- BECOME A SHOPPER SERVICES SECTION ------ */}
+				<BecomeAShopperServices isDesktop={isDesktop} />
 			</Footer>
 		</>
 	);
