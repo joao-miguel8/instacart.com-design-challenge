@@ -41,7 +41,7 @@ function Searchbar() {
 	const [searchQuery, setSearchQuery] = useState("");
 	const [isSearchFocused, setIsSearchFocused] = useState(false);
 	const inputRef = useRef<HTMLInputElement | null>(null);
-	const [filteredSearchList, setFilteredSearchList] = useState(searchQueries);
+	const [filteredSearchList] = useState(searchQueries);
 
 	const handleSearchReset = () => {
 		setSearchQuery("");
@@ -74,7 +74,7 @@ function Searchbar() {
 							<ul>
 								{popularSearchesData.map(item => {
 									return (
-										<li className="popular-search-list-item">
+										<li key={item.itemName} className="popular-search-list-item">
 											<a>
 												<img src={item.img} alt="img" />
 												<span>{item.itemName}</span>
@@ -92,7 +92,6 @@ function Searchbar() {
 							{queryList
 								.filter(item => item.query.toLowerCase().includes(searchQuery.toLowerCase()))
 								.map(filteredQuery => {
-									console.log(filteredQuery);
 									return (
 										<li className="search-list-item" key={filteredQuery.query}>
 											<a href="#">
