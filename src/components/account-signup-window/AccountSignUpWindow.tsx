@@ -8,6 +8,7 @@ import "../../App.css";
 import type { SignUpOptionsMapAsType } from "../home-main-menu/types/SignUpOptionsType";
 import type { LoginSignUpStatusType } from "./types/LoginSignUpStatusType";
 import { useState } from "react";
+import useDisableBodyScroll from "../../hooks/useDisableBodyScroll";
 
 export function AccountSignUpWindow({ loginSignUpStatus, setLoginSignUpStatus }: { loginSignUpStatus: LoginSignUpStatusType; setLoginSignUpStatus: (status: LoginSignUpStatusType) => void }) {
 	const signUpLogoIcons = {
@@ -53,6 +54,8 @@ export function AccountSignUpWindow({ loginSignUpStatus, setLoginSignUpStatus }:
 	};
 
 	const [showEmail, setShowEmail] = useState(false);
+
+	useDisableBodyScroll();
 
 	return (
 		<>
