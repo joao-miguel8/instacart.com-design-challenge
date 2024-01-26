@@ -1,4 +1,7 @@
 .header {
+	position: fixed;
+	background: white;
+	z-index: 50;
 	width: 100%;
 	border-bottom: 1px solid #e8e8e8;
 }
