@@ -10,6 +10,7 @@ import { useState } from "react";
 import type { NavListType } from "./types/NavListType";
 import type { CountrySelectionOptionsType } from "./types/CountrySelectionOptionsType";
 import type { LoginSignUpStatusType } from "../account-signup-window/types/LoginSignUpStatusType";
+import useDisableBodyScroll from "../../hooks/useDisableBodyScroll";
 
 function ChangeCountryPopup({
 	isCloseCountryChoicePopupOpen,
@@ -100,6 +101,8 @@ function HomeMainMenu({ handleCloseNavMenu, isMenuOpen, loginSignUpStatus, setLo
 		{ flag: "US", name: "United States" },
 		{ flag: "CA", name: "Canada" },
 	];
+
+	useDisableBodyScroll();
 
 	const [isMenuItemsListOpen, setIsMenuItemsListOpen] = useState(false);
 	const [isCloseCountryChoicePopupOpen, setIsCloseCountryChoicePopupOpen] = useState(false);
