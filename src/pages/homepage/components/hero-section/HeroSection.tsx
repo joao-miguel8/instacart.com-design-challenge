@@ -1,5 +1,6 @@
 import QRCodePhoneIMG from "../../../../assets/qrcode-phone-img.webp";
 import QRCodeIMG from "../../../../assets/qrcode-img.png";
+import "./heroSection.css";
 
 function HeroSection() {
 	return (
