@@ -4,7 +4,7 @@ import "./heroSection.css";
 
 function HeroSection() {
 	return (
-		<section>
+		<section className="hero-section-container">
 			<div className={`bg-hero-img`}>
 				<div>
 					<h1>Order groceries for delivery or pickup today</h1>
