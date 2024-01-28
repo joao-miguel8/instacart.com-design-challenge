@@ -1,3 +1,7 @@
+.footer-wrapper {
+	padding: 0 5%;
+}
+
 /* ============================= */
 /* <<<<<<<< GET DELIVERIES SERVICES SECTION >>>>>>>>> */
 /* ============================= */
@@ -30,7 +34,7 @@
 	margin-left: 10px;
 	font-size: 17px;
 	font-weight: 600;
-	color: #2953cf;
+	color: #343538;
 }
 
 .get-delivery-services-app-providers-logo-container {
@@ -67,15 +71,10 @@
 /* <<<<<<<< GET DELIVERIES SERVICES SECTION >>>>>>>>> */
 /* ============================= */
 
-.become-a-shopper-services-wrapper {
-	padding: 0 5%;
-}
-
 .become-a-shopper-services-container {
 	display: flex;
 	flex: 1;
 	flex-direction: column;
-	padding: 0 5%;
 	border-top: 0.5px solid rgb(225, 225, 225);
 }
 
@@ -98,7 +97,7 @@
 	margin-left: 10px;
 	font-size: 17px;
 	font-weight: 600;
-	color: #2953cf;
+	color: #343538;
 }
 
 .become-a-shopper-app-providers-logo-container {
@@ -135,8 +134,6 @@
 
 .footer-accessibility-section {
 	padding: 20px;
-	/* display: flex; */
-	/* flex-wrap: wrap; */
 	border-width: 0.5px 0;
 	border-color: rgb(225, 225, 225);
 	border-style: solid;
@@ -145,7 +142,7 @@
 .footer-accessibility-section h4 {
 	font-size: 1rem;
 	font-weight: 600;
-	color: #2953cf;
+	color: #343538;
 }
 
 .footer-toggle-and-text-container {
@@ -211,12 +208,20 @@
 
 /* ------- LEGAL FOOTER SECTION ------- */
 
+.footer-legal-section {
+	padding: 20px;
+	border-width: 0.5px 0;
+	border-color: rgb(225, 225, 225);
+	border-style: solid;
+}
+
 .footer-legal-section h4 {
 	font-size: 1rem;
 	font-weight: 600;
 }
 
 .footer-legal-terms-and-policy-links {
+	padding: 0 5% 0 0;
 	margin-top: 20px;
 	display: flex;
 	gap: 14px;
@@ -259,7 +264,7 @@
 	}
 
 	.get-delivery-services-container {
-		padding: 0px;
+		padding: 0 20px;
 		display: flex;
 		justify-content: space-between;
 		border-top: 0.5px solid rgb(225, 225, 225);
