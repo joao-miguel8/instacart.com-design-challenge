@@ -17,6 +17,7 @@ import Footer from "../../components/footer/Footer";
 import BecomeAShopperServices from "../../components/footer/components/BecomeAShopperServices";
 import GetDeliveryServices from "../../components/footer/components/GetDeliveryServices";
 import HeroSection from "./components/hero-section/HeroSection";
+import AccessibilityFooterToggleSection from "../../components/footer/components/AccessibilityFooterToggleSection";
 
 function Homepage() {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -71,6 +72,7 @@ function Homepage() {
 				<GetDeliveryServices isDesktop={isDesktop} />
 				{/* ----- BECOME A SHOPPER SERVICES SECTION ------ */}
 				<BecomeAShopperServices isDesktop={isDesktop} />
+				<AccessibilityFooterToggleSection />
 			</Footer>
 		</>
 	);
