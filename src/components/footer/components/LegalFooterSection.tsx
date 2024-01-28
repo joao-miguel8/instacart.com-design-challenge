@@ -5,24 +5,28 @@ import "../style/footer.css";
 function LegalFooterSection() {
 	return (
 		<div className="footer-legal-section">
-			<h4>Legal</h4>
-			<div className="footer-legal-terms-and-policy-links">
-				<a href="https://www.instacart.com/terms">Terms of Use</a>
-				<a href="https://www.instacart.com/privacy">Privacy Policy</a>
-			</div>
-			<div className="footer-social-media-container">
-				<a href="https://www.facebook.com/Instacart">
-					<FaFacebookSquare size={"2rem"} color={"rgb(52, 53, 56)"} />
-				</a>
-				<a href="https://twitter.com/instacart">
-					<FaTwitter size={"1.8rem"} color={"rgb(52, 53, 56)"} />
-				</a>
-				<a href="https://www.instagram.com/instacart/">
-					<AiFillInstagram size={"1.8rem"} color={"rgb(52, 53, 56)"} />
-				</a>
-				<a href="https://www.pinterest.com/instacart/">
-					<FaPinterest size={"1.8rem"} color={"rgb(52, 53, 56)"} />
-				</a>
+			<div className="footer-legal-heading-terms-and-policy-container">
+				<h4>Legal</h4>
+				<div className="footer-legal-socials-and-terms-and-policy-container">
+					<div className="footer-legal-terms-and-policy-links">
+						<a href="https://www.instacart.com/terms">Terms of Use</a>
+						<a href="https://www.instacart.com/privacy">Privacy Policy</a>
+					</div>
+					<div className="footer-social-media-container">
+						<a href="https://www.facebook.com/Instacart">
+							<FaFacebookSquare size={"2rem"} color={"rgb(52, 53, 56)"} />
+						</a>
+						<a href="https://twitter.com/instacart">
+							<FaTwitter size={"1.8rem"} color={"rgb(52, 53, 56)"} />
+						</a>
+						<a href="https://www.instagram.com/instacart/">
+							<AiFillInstagram size={"1.8rem"} color={"rgb(52, 53, 56)"} />
+						</a>
+						<a href="https://www.pinterest.com/instacart/">
+							<FaPinterest size={"1.8rem"} color={"rgb(52, 53, 56)"} />
+						</a>
+					</div>
+				</div>
 			</div>
 			<div className="footer-legal-terms-conditions">
 				<p>Apple and the Apple logo are trademarks of Apple Inc., registered in the U.S. and other countries. App Store is a service mark of Apple Inc. Android, Google Play and the Google Play logo are trademarks of Google LLC.</p>

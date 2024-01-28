@@ -278,6 +278,18 @@
 	.become-a-shopper-services-wrapper {
 		margin-top: 60px;
 	}
+
+	.footer-legal-heading-terms-and-policy-container {
+		display: flex;
+	}
+
+	.footer-legal-heading-terms-and-policy-container h4 {
+		flex: 2 0 0;
+	}
+
+	.footer-legal-socials-and-terms-and-policy-container {
+		flex: 2 0 0;
+	}
 }
 
 /* ======================== */
