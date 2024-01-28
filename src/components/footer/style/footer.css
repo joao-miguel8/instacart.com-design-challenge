@@ -140,15 +140,16 @@
 }
 
 .footer-accessibility-section h4 {
+	flex: 1 0 0;
 	font-size: 1rem;
 	font-weight: 600;
 	color: #343538;
 }
 
 .footer-toggle-and-text-container {
+	flex: 1 0 0;
 	margin-top: 12px;
 	display: flex;
-	justify-content: space-between;
 	align-items: center;
 }
 
@@ -277,6 +278,11 @@
 
 	.become-a-shopper-services-wrapper {
 		margin-top: 60px;
+	}
+
+	.footer-accessibility-section {
+		display: flex;
+		align-items: center;
 	}
 
 	.footer-legal-heading-terms-and-policy-container {
