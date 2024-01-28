@@ -133,6 +133,7 @@
 /* -------- FOOTER ACCESSIBILITY SECTION: ------- */
 
 .footer-accessibility-section {
+	margin-top: 80px;
 	padding: 20px;
 	border-width: 0.5px 0;
 	border-color: rgb(225, 225, 225);
